@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Characters/EventPart_PositionPicker.gd" type="Script" id=1]
+[ext_resource path="res://addons/dialogic/Images/Event Icons/character.svg" type="Texture2D" id=2]
+
+[node name="PositionPicker" type="VBoxContainer"]
+offset_right = 186.0
+offset_bottom = 30.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="."]
+offset_right = 258.0
+offset_bottom = 30.0
+
+[node name="Label" type="Label" parent="HBox"]
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 22.0
+text = "  Position:"
+
+[node name="PositionsContainer" type="HBoxContainer" parent="HBox"]
+offset_left = 68.0
+offset_right = 254.0
+offset_bottom = 30.0
+
+[node name="position-0" type="Button" parent="HBox/PositionsContainer"]
+self_modulate = Color( 0.596078, 0.596078, 0.596078, 0.396078 )
+offset_right = 34.0
+offset_bottom = 30.0
+icon = ExtResource( 2 )
+
+[node name="position-1" type="Button" parent="HBox/PositionsContainer"]
+self_modulate = Color( 0.596078, 0.596078, 0.596078, 0.396078 )
+offset_left = 38.0
+offset_right = 72.0
+offset_bottom = 30.0
+icon = ExtResource( 2 )
+
+[node name="position-2" type="Button" parent="HBox/PositionsContainer"]
+self_modulate = Color( 0.596078, 0.596078, 0.596078, 0.396078 )
+offset_left = 76.0
+offset_right = 110.0
+offset_bottom = 30.0
+icon = ExtResource( 2 )
+
+[node name="position-3" type="Button" parent="HBox/PositionsContainer"]
+self_modulate = Color( 0.596078, 0.596078, 0.596078, 0.396078 )
+offset_left = 114.0
+offset_right = 148.0
+offset_bottom = 30.0
+icon = ExtResource( 2 )
+
+[node name="position-4" type="Button" parent="HBox/PositionsContainer"]
+self_modulate = Color( 0.596078, 0.596078, 0.596078, 0.396078 )
+offset_left = 152.0
+offset_right = 186.0
+offset_bottom = 30.0
+icon = ExtResource( 2 )

@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/dialogic/Images/Event Icons/character.svg" type="Texture2D" id=1]
+[ext_resource path="res://addons/dialogic/Editor/Events/Parts/ResourcePickers/Characters/EventPart_CharacterPicker.gd" type="Script" id=2]
+[ext_resource path="res://addons/dialogic/Editor/Events/styles/MenuButtonNormal.tres" type="StyleBox" id=3]
+[ext_resource path="res://addons/dialogic/Editor/Events/styles/MenuButtonHover.tres" type="StyleBox" id=4]
+
+[node name="CharacterPicker" type="VBoxContainer"]
+offset_right = 114.0
+offset_bottom = 22.0
+custom_minimum_size = Vector2( 0, 30 )
+size_flags_vertical = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="."]
+offset_right = 399.0
+offset_bottom = 6.0
+size_flags_vertical = 3
+
+[node name="Icon" type="TextureRect" parent="HBox"]
+visible = false
+offset_top = 4.0
+offset_right = 22.0
+offset_bottom = 26.0
+size_flags_vertical = 4
+texture = ExtResource( 1 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButton" type="MenuButton" parent="HBox"]
+visible = false
+offset_left = 26.0
+offset_right = 106.0
+offset_bottom = 30.0
+size_flags_vertical = 3
+theme_override_styles/hover = ExtResource( 4 )
+theme_override_styles/pressed = ExtResource( 3 )
+theme_override_styles/normal = ExtResource( 3 )
+text = "Character"
+flat = false
+
+[node name="NoCharacterContainer" type="HBoxContainer" parent="."]
+offset_top = 10.0
+offset_right = 399.0
+offset_bottom = 30.0
+
+[node name="NoCharacterLabel1" type="Label" parent="NoCharacterContainer"]
+offset_top = 3.0
+offset_right = 261.0
+offset_bottom = 17.0
+text = "You haven't created a character yet. Click"
+
+[node name="NoCharacterButton" type="Button" parent="NoCharacterContainer"]
+offset_left = 265.0
+offset_right = 306.0
+offset_bottom = 20.0
+text = "here"
+
+[node name="NoCharacterLabel2" type="Label" parent="NoCharacterContainer"]
+offset_left = 310.0
+offset_top = 3.0
+offset_right = 399.0
+offset_bottom = 17.0
+text = "to create one."

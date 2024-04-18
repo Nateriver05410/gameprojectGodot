@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=1]
+[ext_resource path="res://title_screen/buttons/win.tscn" type="PackedScene" id=2]
+[ext_resource path="res://title_screen/lost.gd" type="Script" id=3]
+[ext_resource path="res://title_screen/000EX.png" type="Texture2D" id=4]
+[ext_resource path="res://gigi v2/blue/01-moving/B-angry-1.png" type="Texture2D" id=5]
+[ext_resource path="res://gigi v2/red/01-moving/R-angry-2.png" type="Texture2D" id=6]
+[ext_resource path="res://gigi v2/yellow/01-moving/Y-angry-2.png" type="Texture2D" id=7]
+[ext_resource path="res://you_lose.wav" type="AudioStream" id=8]
+
+[sub_resource type="FontFile" id=1]
+size = 157
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="000EX" type="Sprite2D" parent="."]
+position = Vector2( -915.513, 77.4838 )
+texture = ExtResource( 4 )
+
+[node name="Win" parent="." instance=ExtResource( 2 )]
+offset_left = 728.915
+offset_top = 458.933
+offset_right = 1020.92
+offset_bottom = 537.933
+
+[node name="Label" type="Label" parent="."]
+offset_left = 85.6744
+offset_top = 203.894
+offset_right = 1263.67
+offset_bottom = 363.894
+scale = Vector2( 0.75, 0.75 )
+theme_override_fonts/font = SubResource( 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 20
+text = "You     Lose"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="B-angry-1" type="Sprite2D" parent="Label"]
+position = Vector2( 548.917, 187.031 )
+scale = Vector2( 0.384855, 0.331105 )
+texture = ExtResource( 5 )
+
+[node name="R-angry-2" type="Sprite2D" parent="Label/B-angry-1"]
+position = Vector2( 509.277, 340.819 )
+texture = ExtResource( 6 )
+
+[node name="Y-angry-2" type="Sprite2D" parent="Label/B-angry-1/R-angry-2"]
+position = Vector2( -1117.32, -35.8755 )
+texture = ExtResource( 7 )
+
+[node name="scene" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+bus = "SFX"
+
+[connection signal="pressed" from="Win" to="." method="_on_Win_pressed"]
+[connection signal="finished" from="scene" to="." method="_on_scene_finished"]

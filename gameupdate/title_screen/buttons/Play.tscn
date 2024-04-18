@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=1]
+[ext_resource path="res://title_screen/buttons/MenuButton.gd" type="Script" id=2]
+
+[sub_resource type="FontFile" id=5]
+
+[sub_resource type="FontFile" id=4]
+size = 73
+font_data = ExtResource( 1 )
+
+[node name="NewGameButton" type="Button"]
+offset_left = 2.24268
+offset_top = 0.828415
+offset_right = 158.243
+offset_bottom = 134.828
+theme_override_fonts/font = SubResource( 5 )
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.34314
+offset_top = 9.17159
+offset_right = 211.343
+offset_bottom = -28.8284
+custom_minimum_size = Vector2( 360, 60 )
+theme_override_fonts/font = SubResource( 4 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 5
+text = "Play"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}

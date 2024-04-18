@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://title_screen/logo2.png" type="Texture2D" id=1]
+[ext_resource path="res://title_screen/buttons/Exit.tscn" type="PackedScene" id=2]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Menu" type="VBoxContainer" parent="."]
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 1160.0
+offset_bottom = 640.0
+
+[node name="Logo" type="TextureRect" parent="Menu"]
+offset_right = 1040.0
+offset_bottom = 340.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+offset_top = 344.0
+offset_right = 1040.0
+offset_bottom = 560.0
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
+offset_right = 1040.0
+offset_bottom = 216.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NewButton" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]

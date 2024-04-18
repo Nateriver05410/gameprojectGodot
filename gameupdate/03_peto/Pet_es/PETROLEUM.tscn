@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://03-ทะเลปิโตเลี่ยม/BG-Petroleum Rig.png" type="Texture2D" id=1]
+[ext_resource path="res://03-ทะเลปิโตเลี่ยม/BG-sky.png" type="Texture2D" id=2]
+[ext_resource path="res://03-ทะเลปิโตเลี่ยม/BG-Ocean.png" type="Texture2D" id=3]
+[ext_resource path="res://03-ทะเลปิโตเลี่ยม/BG-Ship1.png" type="Texture2D" id=4]
+[ext_resource path="res://03-ทะเลปิโตเลี่ยม/BG-Island2.png" type="Texture2D" id=5]
+[ext_resource path="res://03-ทะเลปิโตเลี่ยม/BG-Ship2.png" type="Texture2D" id=6]
+[ext_resource path="res://03-ทะเลปิโตเลี่ยม/BG-Island1.png" type="Texture2D" id=7]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BG-sky" type="Sprite2D" parent="."]
+position = Vector2( 3840.95, 266.04 )
+scale = Vector2( 1, 0.488087 )
+texture = ExtResource( 2 )
+
+[node name="BG-Island2" type="Sprite2D" parent="."]
+position = Vector2( 2973.69, 490.742 )
+scale = Vector2( 1, 0.488087 )
+texture = ExtResource( 5 )
+
+[node name="BG-Island1" type="Sprite2D" parent="."]
+position = Vector2( 6179.1, 478.81 )
+scale = Vector2( 1, 0.488087 )
+texture = ExtResource( 7 )
+
+[node name="BG-Ocean" type="Sprite2D" parent="."]
+position = Vector2( 3843.08, 630.997 )
+scale = Vector2( 1, 0.488087 )
+texture = ExtResource( 3 )
+
+[node name="BG-Ship1" type="Sprite2D" parent="."]
+position = Vector2( 275.534, 488.9 )
+scale = Vector2( 0.485457, 0.59052 )
+texture = ExtResource( 4 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="BG-Ship1"]
+position = Vector2( 1395.77, -190.782 )
+scale = Vector2( 0.790564, 0.792945 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="BG-Ship1/BG-Petroleum Rig"]
+position = Vector2( 2310.66, 223.09 )
+texture = ExtResource( 6 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="BG-Ship1/BG-Petroleum Rig"]
+position = Vector2( 10971.1, 45.3394 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship1" type="Sprite2D" parent="BG-Ship1/BG-Petroleum Rig/BG-Petroleum Rig"]
+position = Vector2( -3808.98, 213.093 )
+texture = ExtResource( 4 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="."]
+position = Vector2( 5904.85, 478.294 )
+scale = Vector2( 0.401459, 0.621673 )
+texture = ExtResource( 6 )

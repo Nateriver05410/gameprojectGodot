@@ -1,0 +1,115 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://title_screen/game/NewGame.tscn" type="PackedScene" id=1]
+[ext_resource path="res://title_screen/images.jpg" type="Texture2D" id=2]
+[ext_resource path="res://title_screen/fonts/bangkok-display_regular_v1-0.ttf" type="FontFile" id=3]
+[ext_resource path="res://title_screen/Untitled-2.png" type="Texture2D" id=4]
+[ext_resource path="res://title_screen/COINS.png" type="Texture2D" id=5]
+[ext_resource path="res://title_screen/71275484_2570421276353239_519945227570511872_n.png" type="Texture2D" id=6]
+[ext_resource path="res://title_screen/fonts/bangkok_regular-italic_v1-0.ttf" type="FontFile" id=7]
+[ext_resource path="res://title_screen/fonts/bangkok-display_bold_v1-0.ttf" type="FontFile" id=8]
+[ext_resource path="res://title_screen/logo1 (3).png" type="Texture2D" id=9]
+
+[sub_resource type="FontFile" id=1]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="FontFile" id=2]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="AnimatedTexture" id=3]
+
+[sub_resource type="FontFile" id=4]
+size = 25
+font_data = ExtResource( 8 )
+
+[node name="Options" instance=ExtResource( 1 )]
+offset_left = -1.75812
+offset_top = 1.75809
+offset_right = -1.75806
+offset_bottom = 1.75806
+
+[node name="images" type="Sprite2D" parent="." index="0"]
+position = Vector2( 644.982, 359.277 )
+scale = Vector2( 4.25455, 4.25455 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="." index="1"]
+offset_left = 51.0
+offset_top = 49.467
+offset_right = 1088.58
+offset_bottom = 132.467
+theme_override_fonts/font = SubResource( 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 5
+text = "
+เป้าหมาย:  ขับรถตุ๊กตุ๊กๆโดยเก็บเหรียญเพื่อทำคะแนนให้ได้มากที่สูด "
+
+[node name="Untitled-2" type="Sprite2D" parent="Label" index="0"]
+position = Vector2( 1013.33, 381.018 )
+scale = Vector2( 0.505866, 0.505866 )
+texture = ExtResource( 4 )
+
+[node name="COINS" type="Sprite2D" parent="Label" index="1"]
+position = Vector2( 115.263, 296.737 )
+scale = Vector2( 0.499554, 0.499554 )
+texture = ExtResource( 5 )
+
+[node name="71275484_2570421276353239_519945227570511872_n" type="Sprite2D" parent="Label/COINS" index="0"]
+position = Vector2( 305.208, 487.305 )
+scale = Vector2( 1.31136, 1.31136 )
+texture = ExtResource( 6 )
+
+[node name="Label2" type="Label" parent="." index="2"]
+offset_left = 52.2579
+offset_top = 134.868
+offset_right = 903.258
+offset_bottom = 303.868
+theme_override_fonts/font = SubResource( 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 5
+text = "
+ปุ่มบังคับ: ขึ้นลงเพื่อเก็บ  ไอเท็ม และ  หลบหลีกสิ่งกีดขวาง
+
+"
+
+[node name="Button" type="Button" parent="." index="3"]
+offset_left = 1079.64
+offset_top = 7.93536
+offset_right = 1350.64
+offset_bottom = 55.9354
+pivot_offset = Vector2( -970, -212 )
+theme_override_fonts/font = SubResource( 2 )
+text = "Back"
+icon = SubResource( 3 )
+flat = true
+
+[node name="CenterContainer" parent="." index="4"]
+visible = false
+offset_left = 506.157
+offset_top = -42.4005
+offset_right = 299.157
+offset_bottom = -42.4005
+
+[node name="VBoxContainer" parent="CenterContainer" index="0"]
+offset_left = 417.0
+offset_top = 322.0
+offset_right = 656.0
+offset_bottom = 397.0
+
+[node name="Label3" type="Label" parent="." index="5"]
+offset_left = 506.861
+offset_top = 686.116
+offset_right = 1447.86
+offset_bottom = 719.116
+theme_override_fonts/font = SubResource( 4 )
+theme_override_colors/font_color = Color( 0.701961, 0.101961, 0.101961, 1 )
+text = "ข้อควรระวัง: หากโดนสิ่งกีดขวางจะทำให้น้ำมันของคุณลดลงและตายได้"
+
+[node name="logo1 (3)" type="Sprite2D" parent="." index="6"]
+position = Vector2( 560.036, 375.731 )
+texture = ExtResource( 9 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

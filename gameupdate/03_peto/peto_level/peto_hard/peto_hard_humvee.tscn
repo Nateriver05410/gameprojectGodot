@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://humvee.tscn" type="PackedScene" id=1]
+[ext_resource path="res://03_peto/PETROLEUMh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Dam_hard.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.19696, -47.8353 )
+script = ExtResource( 3 )
+
+[node name="cha" parent="Node2D" instance=ExtResource( 1 )]
+position = Vector2( 407.755, 388.645 )
+scale = Vector2( 0.4, 0.4 )

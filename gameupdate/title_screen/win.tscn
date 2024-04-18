@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=1]
+[ext_resource path="res://title_screen/buttons/win.tscn" type="PackedScene" id=2]
+[ext_resource path="res://title_screen/win.gd" type="Script" id=3]
+[ext_resource path="res://UFO/UFO.png" type="Texture2D" id=4]
+[ext_resource path="res://Tank/tank.png" type="Texture2D" id=5]
+[ext_resource path="res://title_screen/000EX.png" type="Texture2D" id=6]
+[ext_resource path="res://title_screen/moto.png" type="Texture2D" id=7]
+[ext_resource path="res://Humvee/humvee.png" type="Texture2D" id=8]
+
+[sub_resource type="FontFile" id=1]
+size = 157
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="000EX" type="Sprite2D" parent="."]
+position = Vector2( -915.513, 77.4838 )
+texture = ExtResource( 6 )
+
+[node name="moto" type="Sprite2D" parent="."]
+position = Vector2( 396.325, 334.377 )
+scale = Vector2( 0.129306, 0.128626 )
+texture = ExtResource( 7 )
+
+[node name="UFO" type="Sprite2D" parent="moto"]
+position = Vector2( 1272.95, 69.8044 )
+texture = ExtResource( 4 )
+
+[node name="humvee" type="Sprite2D" parent="moto/UFO"]
+position = Vector2( 1728.03, -43.979 )
+texture = ExtResource( 8 )
+
+[node name="Win" parent="." instance=ExtResource( 2 )]
+offset_left = 681.488
+offset_top = 457.15
+offset_right = 973.488
+offset_bottom = 536.15
+
+[node name="Label" type="Label" parent="."]
+offset_left = 87.2693
+offset_top = 224.028
+offset_right = 1265.27
+offset_bottom = 384.028
+scale = Vector2( 0.75, 0.75 )
+theme_override_fonts/font = SubResource( 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 20
+text = "You are winner"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="tank" type="Sprite2D" parent="."]
+position = Vector2( 231.415, 347.599 )
+scale = Vector2( 0.120453, 0.156096 )
+texture = ExtResource( 5 )
+
+[connection signal="pressed" from="Win" to="." method="_on_Win_pressed"]

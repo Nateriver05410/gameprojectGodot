@@ -1,0 +1,150 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://UFO/03-damaged/1.png" type="Texture2D" id=1]
+[ext_resource path="res://UFO/03-damaged/2.png" type="Texture2D" id=2]
+[ext_resource path="res://UFO/04-broke/1.png" type="Texture2D" id=3]
+[ext_resource path="res://UFO/03-damaged/4.png" type="Texture2D" id=4]
+[ext_resource path="res://UFO/03-damaged/3.png" type="Texture2D" id=5]
+[ext_resource path="res://UFO/04-broke/2.png" type="Texture2D" id=6]
+[ext_resource path="res://UFO/04-broke/3.png" type="Texture2D" id=7]
+[ext_resource path="res://bullet/LifeBar.tscn" type="PackedScene" id=8]
+[ext_resource path="res://soundsandmusic/bomm.ogg" type="AudioStream" id=9]
+[ext_resource path="res://soundsandmusic/music/bensound-dance.mp3" type="AudioStream" id=10]
+[ext_resource path="res://kill_it.wav" type="AudioStream" id=11]
+[ext_resource path="res://you_lose.wav" type="AudioStream" id=12]
+[ext_resource path="res://shoottest01.wav" type="AudioStream" id=13]
+[ext_resource path="res://soundsandmusic/sounds/jump1.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Ufo.gd" type="Script" id=15]
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "damaged",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "broke",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "moving",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 79.8691
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 78.8685
+
+[sub_resource type="FontFile" id=4]
+size = 73
+font_data = ExtResource( 16 )
+
+[node name="cha" type="CharacterBody2D"]
+script = ExtResource( 15 )
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+frames = SubResource( 1 )
+animation = "shoot"
+
+[node name="Marker2D" type="Marker2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.56763, 0 )
+scale = Vector2( 2.89887, 0.919999 )
+shape = SubResource( 2 )
+
+[node name="cha" type="Area2D" parent="CollisionShape2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/cha"]
+shape = SubResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 61, 93 )
+current = true
+editor_draw_limits = true
+
+[node name="Lbar" type="Node2D" parent="."]
+position = Vector2( 0, 1.41422 )
+z_index = 5
+
+[node name="LifeBar" parent="Lbar" instance=ExtResource( 8 )]
+offset_left = -176.302
+offset_top = -130.555
+offset_right = 192.698
+offset_bottom = -96.5554
+max_value = 150.0
+value = 150.0
+
+[node name="Label" type="Label" parent="Lbar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -187.414
+offset_right = 292.0
+offset_bottom = -98.414
+custom_minimum_size = Vector2( 360, 60 )
+scale = Vector2( 0.8, 0.8 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = SubResource( 4 )
+text = "Play"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="soundtest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+bus = "SFX"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="soundtest2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+bus = "SFX"
+
+[node name="bombsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+bus = "SFX"
+
+[node name="Bot_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+bus = "SFX"
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+bus = "SFX"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="bgsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -5.048
+bus = "Music"
+
+[node name="finish_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+bus = "SFX"
+
+[connection signal="area_entered" from="CollisionShape2D/cha" to="." method="_on_cha_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

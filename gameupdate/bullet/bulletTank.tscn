@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Item/Tankbull.png" type="Texture2D" id=1]
+[ext_resource path="res://bullet/bulletTank.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Sprite2D" type="Sprite2D"]
+modulate = Color( 0.117647, 0.827451, 0.447059, 1 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="bullethum2" type="Area2D" parent="."]
+position = Vector2( -2.93866, 3.80578 )
+scale = Vector2( 0.1, 0.1 )
+collision_layer = 8
+collision_mask = 2
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bullethum2"]
+position = Vector2( 0.884371, -7.67371 )
+rotation = 1.60134
+scale = Vector2( -27.0051, -26.6865 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2( -0.0821533, 2.8333 )
+scale = Vector2( 2.77204, 2.56543 )
+__meta__ = {
+"_editor_description_": ""
+}

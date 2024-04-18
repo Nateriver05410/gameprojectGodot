@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Option.gd" type="Script" id=1]
+[ext_resource path="res://soundsandmusic/music/bensound-dance.mp3" type="AudioStream" id=2]
+[ext_resource path="res://shoottest01.wav" type="AudioStream" id=3]
+[ext_resource path="res://title_screen/back.tscn" type="PackedScene" id=4]
+[ext_resource path="res://soundsandmusic/fight.ogg" type="AudioStream" id=5]
+[ext_resource path="res://01_DAM/asset/000-EX.png" type="Texture2D" id=6]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.08588
+offset_top = 0.840881
+offset_right = 2.08582
+offset_bottom = 0.840881
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="000-EX" type="Sprite2D" parent="."]
+position = Vector2( 805.619, 243.935 )
+texture = ExtResource( 6 )
+
+[node name="Options" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -2.0
+offset_right = 151.0
+offset_bottom = -2.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Options"]
+offset_top = 236.0
+offset_right = 303.0
+offset_bottom = 250.0
+text = "Options"
+
+[node name="Label2" type="Label" parent="Options"]
+offset_top = 254.0
+offset_right = 303.0
+offset_bottom = 268.0
+text = "Master Volume"
+
+[node name="master" type="HSlider" parent="Options"]
+offset_top = 272.0
+offset_right = 303.0
+offset_bottom = 288.0
+min_value = -45.0
+max_value = 0.0
+
+[node name="Label3" type="Label" parent="Options"]
+offset_top = 292.0
+offset_right = 303.0
+offset_bottom = 306.0
+text = "Music Volume"
+
+[node name="Music" type="HSlider" parent="Options"]
+offset_top = 310.0
+offset_right = 303.0
+offset_bottom = 326.0
+min_value = -45.0
+max_value = 0.0
+
+[node name="Label4" type="Label" parent="Options"]
+offset_top = 330.0
+offset_right = 303.0
+offset_bottom = 344.0
+text = "FX Volume"
+
+[node name="SFX" type="HSlider" parent="Options"]
+offset_top = 348.0
+offset_right = 303.0
+offset_bottom = 364.0
+min_value = -45.0
+max_value = 0.0
+
+[node name="back" parent="." instance=ExtResource( 4 )]
+offset_left = 924.726
+offset_top = 550.0
+offset_right = 1100.73
+offset_bottom = 629.0
+scale = Vector2( 0.5, 0.5 )
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="bgsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.048
+bus = "Music"
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "SFX"
+
+[connection signal="value_changed" from="Options/master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="Options/Music" to="." method="_on_Music_value_changed"]
+[connection signal="value_changed" from="Options/SFX" to="." method="_on_SFX_value_changed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

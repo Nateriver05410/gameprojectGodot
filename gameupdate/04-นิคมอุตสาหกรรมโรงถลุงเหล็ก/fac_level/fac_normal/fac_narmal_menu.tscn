@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://title_screen/fade_in/FadeIn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=2]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/000-EX.png" type="Texture2D" id=3]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/fac_level/fac_normal/btn_fac_normal_tank.tscn" type="PackedScene" id=4]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/fac_level/fac_normal/btn_fac_normal_humvee.tscn" type="PackedScene" id=5]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/fac_level/fac_normal/btn_fac_normal_ufo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/fac_level/fac_normal/btn_fac_normal_moto.tscn" type="PackedScene" id=7]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/fac_level/fac_normal/fac_narmal_menu.gd" type="Script" id=8]
+[ext_resource path="res://title_screen/back.tscn" type="PackedScene" id=9]
+
+[sub_resource type="FontFile" id=1]
+size = 157
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="000-EX" type="Sprite2D" parent="."]
+position = Vector2( -1692.81, 76.2468 )
+texture = ExtResource( 3 )
+
+[node name="humvee" parent="." instance=ExtResource( 5 )]
+offset_left = 46.0
+offset_top = 219.0
+offset_right = 338.0
+offset_bottom = 298.0
+
+[node name="moto" parent="." instance=ExtResource( 7 )]
+offset_left = 702.0
+offset_top = 230.0
+offset_right = 994.0
+offset_bottom = 309.0
+
+[node name="tank" parent="." instance=ExtResource( 4 )]
+offset_left = 138.0
+offset_top = 389.0
+offset_right = 430.0
+offset_bottom = 468.0
+
+[node name="ufo" parent="." instance=ExtResource( 6 )]
+offset_left = 617.0
+offset_top = 390.0
+offset_right = 909.0
+offset_bottom = 469.0
+
+[node name="FadeIn" parent="." instance=ExtResource( 1 )]
+offset_left = 0.96511
+offset_top = -1.68856
+offset_right = 6.96509
+offset_bottom = 2.31146
+clip_contents = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.8439
+offset_top = 45.8653
+offset_right = 1242.84
+offset_bottom = 205.865
+scale = Vector2( 0.75, 0.75 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 20
+theme_override_fonts/font = SubResource( 1 )
+text = "Escape war zone "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" parent="." instance=ExtResource( 9 )]
+offset_left = 896.217
+offset_top = 535.746
+offset_right = 1072.22
+offset_bottom = 614.746
+scale = Vector2( 0.5, 0.5 )
+
+[connection signal="pressed" from="humvee" to="." method="_on_humvee_pressed"]
+[connection signal="pressed" from="moto" to="." method="_on_moto_pressed"]
+[connection signal="pressed" from="tank" to="." method="_on_tank_pressed"]
+[connection signal="pressed" from="ufo" to="." method="_on_ufo_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://Boss/01-standing/1.png" type="Texture2D" id=1]
+[ext_resource path="res://Boss/03-shoot/3.png" type="Texture2D" id=2]
+[ext_resource path="res://Boss/07-broke/5.png" type="Texture2D" id=3]
+[ext_resource path="res://Boss/04-attack/3.png" type="Texture2D" id=4]
+[ext_resource path="res://Boss/02-ready/1.png" type="Texture2D" id=5]
+[ext_resource path="res://Boss/02-ready/2.png" type="Texture2D" id=6]
+[ext_resource path="res://Boss/01-standing/2.png" type="Texture2D" id=7]
+[ext_resource path="res://Boss/03-shoot/2.png" type="Texture2D" id=8]
+[ext_resource path="res://Boss/04-attack/4.png" type="Texture2D" id=9]
+[ext_resource path="res://Boss/05-electric barrier/1.png" type="Texture2D" id=10]
+[ext_resource path="res://Boss/05-electric barrier/2.png" type="Texture2D" id=11]
+[ext_resource path="res://Boss/07-broke/1.png" type="Texture2D" id=12]
+[ext_resource path="res://Boss/05-electric barrier/electric effect1.png" type="Texture2D" id=13]
+[ext_resource path="res://Boss/07-broke/3.png" type="Texture2D" id=14]
+[ext_resource path="res://Boss/07-broke/2.png" type="Texture2D" id=15]
+[ext_resource path="res://Boss/06-damaged/2.png" type="Texture2D" id=16]
+[ext_resource path="res://Boss/07-broke/4.png" type="Texture2D" id=17]
+[ext_resource path="res://Boss/07-broke/6.png" type="Texture2D" id=18]
+[ext_resource path="res://Boss/03-shoot/1.png" type="Texture2D" id=19]
+[ext_resource path="res://Boss/03-shoot/4.png" type="Texture2D" id=20]
+[ext_resource path="res://Boss/04-attack/1.png" type="Texture2D" id=21]
+[ext_resource path="res://Boss/04-attack/2.png" type="Texture2D" id=22]
+[ext_resource path="res://Boss/04-attack/5.png" type="Texture2D" id=23]
+[ext_resource path="res://Boss/05-electric barrier/electric effect2.png" type="Texture2D" id=24]
+[ext_resource path="res://Boss/06-damaged/1.png" type="Texture2D" id=25]
+[ext_resource path="res://Boss01.gd" type="Script" id=26]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "ready",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "attack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 3 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "broke",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "standing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 16 ) ],
+"loop": false,
+"name": "damaged",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "electric ",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+[sub_resource type="CircleShape2D" id=3]
+
+[node name="Boss" type="CharacterBody2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 26 )
+
+[node name="Boss" type="AnimatedSprite2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+frames = SubResource( 1 )
+animation = "standing"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -9.54134, 15.874 )
+scale = Vector2( 1.32057, 1 )
+shape = SubResource( 2 )
+
+[node name="boss01" type="Area2D" parent="CollisionShape2D"]
+
+[node name="boss01" type="CollisionShape2D" parent="CollisionShape2D/boss01"]
+scale = Vector2( -27.2765, 27.5033 )
+shape = SubResource( 3 )
+
+[connection signal="animation_finished" from="Boss" to="." method="_on_Boss_animation_finished"]
+[connection signal="area_entered" from="CollisionShape2D/boss01" to="." method="_on_boss01_area_entered"]

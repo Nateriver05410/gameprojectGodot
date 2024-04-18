@@ -1,0 +1,332 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://03_peto/BG-Ocean.png" type="Texture2D" id=1]
+[ext_resource path="res://01_DAM/asset/M2-3.png" type="Texture2D" id=2]
+[ext_resource path="res://01_DAM/asset/M5-1.png" type="Texture2D" id=3]
+[ext_resource path="res://01_DAM/asset/M3-1.png" type="Texture2D" id=4]
+[ext_resource path="res://01_DAM/asset/M1-1.png" type="Texture2D" id=5]
+[ext_resource path="res://01_DAM/asset/M1-3.png" type="Texture2D" id=6]
+[ext_resource path="res://01_DAM/asset/M5-3.png" type="Texture2D" id=7]
+[ext_resource path="res://01_DAM/asset/M3-2.png" type="Texture2D" id=8]
+[ext_resource path="res://01_DAM/asset/M2-2.png" type="Texture2D" id=9]
+[ext_resource path="res://01_DAM/asset/S2+G.png" type="Texture2D" id=10]
+[ext_resource path="res://01_DAM/asset/water.png" type="Texture2D" id=11]
+[ext_resource path="res://01_DAM/asset/S1+G.png" type="Texture2D" id=12]
+[ext_resource path="res://bullet/platform.tscn" type="PackedScene" id=13]
+[ext_resource path="res://01_DAM/asset/S2.png" type="Texture2D" id=14]
+[ext_resource path="res://01_DAM/asset/S3+G.png" type="Texture2D" id=15]
+[ext_resource path="res://01_DAM/asset/grass1.png" type="Texture2D" id=16]
+[ext_resource path="res://01_DAM/asset/grass2.png" type="Texture2D" id=17]
+[ext_resource path="res://01_DAM/asset/grass3.png" type="Texture2D" id=18]
+[ext_resource path="res://01_DAM/asset/grass4.png" type="Texture2D" id=19]
+[ext_resource path="res://01_DAM/asset/voltage pole.png" type="Texture2D" id=20]
+[ext_resource path="res://01_DAM/asset/dam.png" type="Texture2D" id=21]
+[ext_resource path="res://01_DAM/asset/satellite dish.png" type="Texture2D" id=22]
+[ext_resource path="res://01_DAM/asset/car1.png" type="Texture2D" id=23]
+[ext_resource path="res://01_DAM/asset/fence1.png" type="Texture2D" id=24]
+[ext_resource path="res://01_DAM/asset/fence2.png" type="Texture2D" id=25]
+[ext_resource path="res://01_DAM/asset/car2.png" type="Texture2D" id=26]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 197.159, 10 )
+
+[node name="ground" type="Node2D"]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="M3-1" type="Sprite2D" parent="."]
+position = Vector2( 1592.96, 355.666 )
+texture = ExtResource( 4 )
+
+[node name="M1-3" type="Sprite2D" parent="M3-1"]
+position = Vector2( 1114.88, 76.6196 )
+texture = ExtResource( 6 )
+
+[node name="M2-2" type="Sprite2D" parent="M3-1"]
+position = Vector2( 710.553, 57.5923 )
+texture = ExtResource( 9 )
+
+[node name="M3-1" type="Sprite2D" parent="M3-1"]
+position = Vector2( 2827.34, 43.3218 )
+texture = ExtResource( 4 )
+
+[node name="M3-2" type="Sprite2D" parent="M3-1"]
+position = Vector2( 5622.5, 31.3533 )
+texture = ExtResource( 8 )
+
+[node name="M5-3" type="Sprite2D" parent="M3-1"]
+position = Vector2( 4645.86, 269.056 )
+texture = ExtResource( 7 )
+
+[node name="M5-1" type="Sprite2D" parent="M3-1"]
+position = Vector2( 1128.16, 228.739 )
+texture = ExtResource( 3 )
+
+[node name="M1-1" type="Sprite2D" parent="M3-1"]
+position = Vector2( 7377.36, 77.5486 )
+texture = ExtResource( 5 )
+
+[node name="M2-3" type="Sprite2D" parent="M3-1"]
+position = Vector2( 6389.59, 117.866 )
+texture = ExtResource( 2 )
+
+[node name="S2" type="Sprite2D" parent="M3-1"]
+position = Vector2( 88.9861, 389.721 )
+texture = ExtResource( 14 )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2( 946.206, 701.762 )
+scale = Vector2( 0.256483, 0.462373 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+scale = Vector2( -19.6052, -23.6081 )
+shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2( 3099.46, 587.02 )
+scale = Vector2( 0.251092, 0.129761 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
+scale = Vector2( -19.6052, -23.6081 )
+shape = SubResource( 1 )
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+position = Vector2( 5143.15, 587.02 )
+scale = Vector2( 0.251092, 0.129761 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite3/StaticBody2D"]
+scale = Vector2( -19.6052, -23.6081 )
+shape = SubResource( 1 )
+
+[node name="Sprite4" type="Sprite2D" parent="."]
+position = Vector2( 7198.31, 587.02 )
+scale = Vector2( 0.251092, 0.129761 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite4/StaticBody2D"]
+position = Vector2( 2250.9, -3.63379 )
+scale = Vector2( -19.6052, -23.6081 )
+shape = SubResource( 1 )
+
+[node name="water" type="Sprite2D" parent="."]
+position = Vector2( 1989.84, 718.954 )
+texture = ExtResource( 11 )
+
+[node name="water2" type="Sprite2D" parent="water"]
+position = Vector2( 3831.76, 2.12842 )
+texture = ExtResource( 11 )
+
+[node name="water3" type="Sprite2D" parent="water"]
+position = Vector2( 7662.38, 2.99628 )
+texture = ExtResource( 11 )
+
+[node name="water" type="Sprite2D" parent="water"]
+position = Vector2( -2481.7, -3.39087 )
+texture = ExtResource( 11 )
+
+[node name="dam" type="Sprite2D" parent="."]
+position = Vector2( 519.195, 468.961 )
+texture = ExtResource( 21 )
+
+[node name="Sprite5" type="Sprite2D" parent="."]
+position = Vector2( 9295.26, 590.384 )
+scale = Vector2( 0.251092, 0.129761 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite5/StaticBody2D"]
+position = Vector2( 7648.6, -43.5942 )
+scale = Vector2( -19.6052, -23.6081 )
+shape = SubResource( 1 )
+
+[node name="S1+G" type="Sprite2D" parent="."]
+position = Vector2( 39.7366, 835.035 )
+texture = ExtResource( 12 )
+
+[node name="S2+G2" type="Sprite2D" parent="S1+G"]
+position = Vector2( 1029.27, 4.23169 )
+texture = ExtResource( 10 )
+
+[node name="S2+G" type="Sprite2D" parent="S1+G"]
+position = Vector2( 421.316, 4.73145 )
+texture = ExtResource( 10 )
+
+[node name="S3+G" type="Sprite2D" parent="S1+G"]
+position = Vector2( 1823.7, -5.0697 )
+texture = ExtResource( 15 )
+
+[node name="S2+G3" type="Sprite2D" parent="S1+G"]
+position = Vector2( 1408.21, 1.3902 )
+texture = ExtResource( 10 )
+
+[node name="S1+G2" type="Sprite2D" parent="."]
+position = Vector2( 2174.84, 796.937 )
+texture = ExtResource( 12 )
+
+[node name="S2+G2" type="Sprite2D" parent="S1+G2"]
+position = Vector2( 1029.27, 4.23169 )
+texture = ExtResource( 10 )
+
+[node name="S2+G" type="Sprite2D" parent="S1+G2"]
+position = Vector2( 421.316, 4.73145 )
+texture = ExtResource( 10 )
+
+[node name="S3+G" type="Sprite2D" parent="S1+G2"]
+position = Vector2( 1823.7, -5.0697 )
+texture = ExtResource( 15 )
+
+[node name="S2+G3" type="Sprite2D" parent="S1+G2"]
+position = Vector2( 1408.21, 1.3902 )
+texture = ExtResource( 10 )
+
+[node name="S1+G3" type="Sprite2D" parent="."]
+position = Vector2( 4257.93, 794.559 )
+texture = ExtResource( 12 )
+
+[node name="S2+G2" type="Sprite2D" parent="S1+G3"]
+position = Vector2( 1029.27, 4.23169 )
+texture = ExtResource( 10 )
+
+[node name="S2+G" type="Sprite2D" parent="S1+G3"]
+position = Vector2( 421.316, 4.73145 )
+texture = ExtResource( 10 )
+
+[node name="S3+G" type="Sprite2D" parent="S1+G3"]
+position = Vector2( 1823.7, -5.0697 )
+texture = ExtResource( 15 )
+
+[node name="S2+G3" type="Sprite2D" parent="S1+G3"]
+position = Vector2( 1408.21, 1.3902 )
+texture = ExtResource( 10 )
+
+[node name="S1+G4" type="Sprite2D" parent="."]
+position = Vector2( 6870.98, 784.951 )
+texture = ExtResource( 12 )
+
+[node name="S2+G2" type="Sprite2D" parent="S1+G4"]
+position = Vector2( 1029.27, 4.23169 )
+texture = ExtResource( 10 )
+
+[node name="S2+G" type="Sprite2D" parent="S1+G4"]
+position = Vector2( 421.316, 4.73145 )
+texture = ExtResource( 10 )
+
+[node name="S3+G" type="Sprite2D" parent="S1+G4"]
+position = Vector2( 1823.7, -5.0697 )
+texture = ExtResource( 15 )
+
+[node name="S2+G3" type="Sprite2D" parent="S1+G4"]
+position = Vector2( 1408.21, 1.3902 )
+texture = ExtResource( 10 )
+
+[node name="S1+G5" type="Sprite2D" parent="."]
+position = Vector2( 10295.6, 792.078 )
+texture = ExtResource( 12 )
+
+[node name="S2+G2" type="Sprite2D" parent="S1+G5"]
+position = Vector2( 1029.27, 4.23169 )
+texture = ExtResource( 10 )
+
+[node name="S2+G" type="Sprite2D" parent="S1+G5"]
+position = Vector2( 421.316, 4.73145 )
+texture = ExtResource( 10 )
+
+[node name="S3+G" type="Sprite2D" parent="S1+G5"]
+position = Vector2( 1823.7, -5.0697 )
+texture = ExtResource( 15 )
+
+[node name="S2+G3" type="Sprite2D" parent="S1+G5"]
+position = Vector2( 1408.21, 1.3902 )
+texture = ExtResource( 10 )
+
+[node name="platform" parent="." instance=ExtResource( 13 )]
+position = Vector2( 6472.7, 479.769 )
+
+[node name="platform2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 9159.71, 459.97 )
+
+[node name="platform3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 9794.04, 651.656 )
+
+[node name="grass2" type="Sprite2D" parent="."]
+position = Vector2( 961.05, 579.417 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="grass1" type="Sprite2D" parent="grass2"]
+position = Vector2( 176.389, 12.5992 )
+texture = ExtResource( 16 )
+
+[node name="grass2" type="Sprite2D" parent="grass2"]
+position = Vector2( 1323.65, -40.3175 )
+texture = ExtResource( 17 )
+
+[node name="grass3" type="Sprite2D" parent="grass2"]
+position = Vector2( 1648.71, -35.2778 )
+texture = ExtResource( 18 )
+
+[node name="grass4" type="Sprite2D" parent="grass2"]
+position = Vector2( 3446.93, -40.3175 )
+texture = ExtResource( 19 )
+
+[node name="grass5" type="Sprite2D" parent="grass2"]
+position = Vector2( 4482.36, -52.9167 )
+texture = ExtResource( 16 )
+
+[node name="grass6" type="Sprite2D" parent="grass2"]
+position = Vector2( 5084.6, -42.8373 )
+texture = ExtResource( 17 )
+
+[node name="grass3" type="Sprite2D" parent="grass2/grass6"]
+position = Vector2( 1320.74, 2.51984 )
+texture = ExtResource( 18 )
+
+[node name="grass2" type="Sprite2D" parent="grass2/grass6"]
+position = Vector2( 2076.69, -12.5992 )
+texture = ExtResource( 17 )
+
+[node name="grass4" type="Sprite2D" parent="grass2/grass6"]
+position = Vector2( 5036.18, 12.5992 )
+texture = ExtResource( 18 )
+
+[node name="satellite dish" type="Sprite2D" parent="."]
+position = Vector2( 1558.47, 485.466 )
+texture = ExtResource( 22 )
+
+[node name="satellite dish" type="Sprite2D" parent="satellite dish"]
+position = Vector2( 3202.81, -38.6597 )
+texture = ExtResource( 22 )
+
+[node name="voltage pole" type="Sprite2D" parent="satellite dish/satellite dish"]
+position = Vector2( -2969.24, -93.2306 )
+texture = ExtResource( 20 )
+
+[node name="car1" type="Sprite2D" parent="."]
+position = Vector2( 114.822, 659.415 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 23 )
+
+[node name="car2" type="Sprite2D" parent="car1"]
+position = Vector2( 18933.5, -383.531 )
+texture = ExtResource( 26 )
+
+[node name="fence1" type="Sprite2D" parent="."]
+position = Vector2( 2921.32, 494.111 )
+texture = ExtResource( 24 )
+
+[node name="fence2" type="Sprite2D" parent="fence1"]
+position = Vector2( -2398.56, 174.641 )
+texture = ExtResource( 25 )

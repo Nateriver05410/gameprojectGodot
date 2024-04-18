@@ -1,0 +1,147 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://bullet/Dam_narmal_ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://01_DAM/asset/sky.png" type="Texture2D" id=3]
+[ext_resource path="res://bullet/finish line.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Dam_normal.gd" type="Script" id=5]
+[ext_resource path="res://bullet/enemy2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://bullet/flying_yellow.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Item/Bomb.tscn" type="PackedScene" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.87659, 400 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21392.7, 10 )
+
+[node name="Main" type="Node2D"]
+position = Vector2( -8.84656, 0.654963 )
+script = ExtResource( 5 )
+
+[node name="ground" parent="." instance=ExtResource( 1 )]
+position = Vector2( -119.087, -66.6592 )
+
+[node name="backwall" type="StaticBody2D" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="backwall"]
+position = Vector2( 110.998, 380.913 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="backwall"]
+position = Vector2( 302.381, -806.35 )
+shape = SubResource( 2 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1029, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, -0.8909 )
+scale = Vector2( 0.267888, 0.508852 )
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="finish_line" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 11793.3, 248.399 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Score" type="CanvasLayer" parent="."]
+scale = Vector2( 2, 2 )
+transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Score"]
+offset_left = 2.64062
+offset_top = 0.112225
+offset_right = 97.6406
+offset_bottom = 14.1122
+text = "enemies killed"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 7.7065
+offset_top = 559.969
+offset_right = 86.7065
+offset_bottom = 573.969
+text = "version: 4.00"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer2"]
+offset_left = 888.354
+offset_top = 9.77606
+offset_right = 1009.35
+offset_bottom = 23.7761
+text = "Level:Dam_Normal"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Bomb" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1255.85, 426.027 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bomb3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2197.57, 417.929 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bomb4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3745.65, 102.161 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bomb5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4525.98, 357.81 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bomb6" parent="." instance=ExtResource( 10 )]
+position = Vector2( 7652.92, 94.9082 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bomb7" parent="." instance=ExtResource( 10 )]
+position = Vector2( 10558.2, 403.903 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="fryingyellow" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5582.71, 208.113 )
+
+[node name="fryingyellow4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1766.34, 194.643 )
+
+[node name="fryingyellow2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6862.54, 140.307 )
+
+[node name="fryingyellow3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9637.27, 46.0206 )
+
+[node name="enemy2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3897.72, 307.894 )
+scale = Vector2( 2, 2 )

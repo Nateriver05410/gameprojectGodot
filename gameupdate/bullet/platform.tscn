@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://01_DAM/asset/bridge.png" type="Texture2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 209.702, 711.181 )
+
+[node name="platform" type="StaticBody2D"]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2( -0.707092, 2.12134 )
+scale = Vector2( 1, 0.984084 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.14026, -141.598 )
+scale = Vector2( 0.888848, 0.127266 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}

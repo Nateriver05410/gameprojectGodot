@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Tank.tscn" type="PackedScene" id=1]
+[ext_resource path="res://03_peto/PETROLEUMez.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( -67.56, -12.404 )
+
+[node name="cha" parent="Node2D" instance=ExtResource( 1 )]
+position = Vector2( 400.187, 338.406 )
+scale = Vector2( 0.8, 0.8 )

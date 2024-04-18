@@ -1,0 +1,676 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://02_farm/02-ทุ่งนา/BG-sky.png" type="Texture2D" id=1]
+[ext_resource path="res://02_farm/02-ทุ่งนา/BG-ground.png" type="Texture2D" id=2]
+[ext_resource path="res://02_farm/02-ทุ่งนา/BG-mound3-2.png" type="Texture2D" id=3]
+[ext_resource path="res://02_farm/02-ทุ่งนา/BG-mound1-3.png" type="Texture2D" id=4]
+[ext_resource path="res://02_farm/02-ทุ่งนา/BG-mound1-1.png" type="Texture2D" id=5]
+[ext_resource path="res://02_farm/02-ทุ่งนา/BG-mound3-1.png" type="Texture2D" id=6]
+[ext_resource path="res://02_farm/02-ทุ่งนา/BG-mound4-3.png" type="Texture2D" id=7]
+[ext_resource path="res://02_farm/02-ทุ่งนา/BG-mound4-1.png" type="Texture2D" id=8]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-กองฟาง.png" type="Texture2D" id=9]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-เกวียน.png" type="Texture2D" id=10]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-เสาไฟฟ้าเซต.png" type="Texture2D" id=11]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-เสาไฟฟ้า+สายไฟ1.png" type="Texture2D" id=12]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-เถียงนา.png" type="Texture2D" id=13]
+[ext_resource path="res://02_farm/FG-street2-1+g.png" type="Texture2D" id=14]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-หญ้าเดี่ยว.png" type="Texture2D" id=15]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-หญ้ากลุ่ม.png" type="Texture2D" id=16]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-เสาไฟฟ้า+สายไฟ2.png" type="Texture2D" id=17]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-รั้วกลุ่ม.png" type="Texture2D" id=18]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-รั้วเสา.png" type="Texture2D" id=19]
+[ext_resource path="res://02_farm/02-ทุ่งนา/MG-เสาไฟฟ้า.png" type="Texture2D" id=20]
+[ext_resource path="res://Item/buf_root.tscn" type="PackedScene" id=21]
+[ext_resource path="res://TestNewMap.gd" type="Script" id=22]
+[ext_resource path="res://bullet/finish line.tscn" type="PackedScene" id=23]
+[ext_resource path="res://bullet/flying_blue.tscn" type="PackedScene" id=24]
+[ext_resource path="res://02_farm/FG-bridge3.png" type="Texture2D" id=25]
+[ext_resource path="res://02_farm/FG-street3+g.png" type="Texture2D" id=26]
+[ext_resource path="res://02_farm/FG-bridge1+g.png" type="Texture2D" id=27]
+[ext_resource path="res://02_farm/FG-bridge2-2.png" type="Texture2D" id=28]
+[ext_resource path="res://02_farm/FG-street2-2.png" type="Texture2D" id=29]
+[ext_resource path="res://02_farm/FG-street1+g.png" type="Texture2D" id=30]
+[ext_resource path="res://02_farm/FG-street3.png" type="Texture2D" id=31]
+[ext_resource path="res://02_farm/FG-street2-2+g.png" type="Texture2D" id=32]
+[ext_resource path="res://02_farm/FG-bridge2-1.png" type="Texture2D" id=33]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 29.1394, 400 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11677.1, 145.31 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1118.04, 85.9365 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 8585.69, -213.574 )
+script = ExtResource( 22 )
+
+[node name="BG-sky" type="Sprite2D" parent="."]
+position = Vector2( 2140.21, -112.854 )
+scale = Vector2( 1.10739, 1.09533 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-mound1-3" type="Sprite2D" parent="BG-sky"]
+position = Vector2( -932.187, 417.905 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-sky2" type="Sprite2D" parent="."]
+position = Vector2( 5983.73, -117.277 )
+scale = Vector2( 0.90181, 1.10379 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-sky3" type="Sprite2D" parent="."]
+position = Vector2( 9629.69, -119.638 )
+scale = Vector2( 1, 1.11421 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-ground" type="Sprite2D" parent="BG-sky3"]
+position = Vector2( -7724.2, 805.443 )
+scale = Vector2( 1, 1.19955 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-mound4-3" type="Sprite2D" parent="BG-sky3/BG-ground"]
+position = Vector2( 5522.41, -390.531 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-ground2" type="Sprite2D" parent="BG-sky3/BG-ground"]
+position = Vector2( 3808.66, 8.61591 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-mound1-2" type="Sprite2D" parent="BG-sky3/BG-ground/BG-ground2"]
+position = Vector2( -5213.05, -314.537 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-mound3-1" type="Sprite2D" parent="BG-sky3/BG-ground/BG-ground2"]
+position = Vector2( -85.7584, -331.513 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-mound1-1" type="Sprite2D" parent="BG-sky3/BG-ground/BG-ground2"]
+position = Vector2( -1347.49, -331.156 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-mound3-2" type="Sprite2D" parent="BG-sky3/BG-ground"]
+position = Vector2( 1206.49, -268.914 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-mound3-1" type="Sprite2D" parent="BG-sky3/BG-ground"]
+position = Vector2( -256.387, -299.538 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-ground" type="Sprite2D" parent="."]
+position = Vector2( 9577.85, 647.925 )
+scale = Vector2( 1.03472, 0.744815 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BG-mound4-1" type="Sprite2D" parent="."]
+position = Vector2( 9862.41, 335.672 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="."]
+position = Vector2( 935.922, 496.658 )
+scale = Vector2( 0.387388, 0.370343 )
+texture = ExtResource( 9 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="MG-กองฟาง"]
+position = Vector2( -214.197, 63.1187 )
+texture = ExtResource( 10 )
+
+[node name="MG-เสาไฟฟ้า+สายไฟ1" type="Sprite2D" parent="MG-กองฟาง"]
+position = Vector2( -792.769, -139.042 )
+texture = ExtResource( 12 )
+
+[node name="MG-เสาไฟฟ้าเซต" type="Sprite2D" parent="MG-กองฟาง/MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( 1984.13, 13.4305 )
+texture = ExtResource( 11 )
+
+[node name="MG-เสาไฟฟ้าเซต2" type="Sprite2D" parent="MG-กองฟาง/MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( -830.308, -72.1178 )
+scale = Vector2( 1.08511, 1.35138 )
+texture = ExtResource( 11 )
+
+[node name="MG-เถียงนา" type="Sprite2D" parent="MG-กองฟาง/MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( -554.486, 75.7039 )
+scale = Vector2( 1.08511, 1.35138 )
+texture = ExtResource( 13 )
+
+[node name="MG-รั้วกลุ่ม" type="Sprite2D" parent="."]
+position = Vector2( 1897.04, 496.728 )
+texture = ExtResource( 18 )
+
+[node name="MG-รั้วเสา" type="Sprite2D" parent="."]
+position = Vector2( 2111.03, 489.867 )
+texture = ExtResource( 19 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-รั้วเสา"]
+position = Vector2( 305.449, 33.5507 )
+texture = ExtResource( 16 )
+
+[node name="MG-เถียงนา" type="Sprite2D" parent="."]
+position = Vector2( 2817.53, 484.661 )
+scale = Vector2( 0.388126, 0.502363 )
+texture = ExtResource( 13 )
+
+[node name="MG-เสาไฟฟ้าเซต" type="Sprite2D" parent="."]
+position = Vector2( 3153.93, 425.949 )
+scale = Vector2( 0.585932, 0.453547 )
+texture = ExtResource( 11 )
+
+[node name="MG-กองฟาง2" type="Sprite2D" parent="."]
+position = Vector2( 2974.56, 496.301 )
+scale = Vector2( 0.359254, 0.317276 )
+texture = ExtResource( 9 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="."]
+position = Vector2( 3085.69, 511.335 )
+scale = Vector2( 0.408378, 0.392767 )
+texture = ExtResource( 10 )
+
+[node name="MG-หญ้าเดี่ยว" type="Sprite2D" parent="."]
+position = Vector2( 3643.05, 517.041 )
+texture = ExtResource( 15 )
+
+[node name="MG-รั้วกลุ่ม" type="Sprite2D" parent="MG-หญ้าเดี่ยว"]
+position = Vector2( 245.062, -27.8043 )
+texture = ExtResource( 18 )
+
+[node name="MG-รั้วเสา" type="Sprite2D" parent="MG-หญ้าเดี่ยว/MG-รั้วกลุ่ม"]
+position = Vector2( 218.25, 23.3082 )
+texture = ExtResource( 19 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-หญ้าเดี่ยว/MG-รั้วกลุ่ม"]
+position = Vector2( 542.445, 19.0703 )
+texture = ExtResource( 16 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="MG-หญ้าเดี่ยว/MG-รั้วกลุ่ม"]
+position = Vector2( 525.137, 4.69183 )
+scale = Vector2( 0.696752, 0.606557 )
+texture = ExtResource( 10 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-หญ้าเดี่ยว/MG-รั้วกลุ่ม/MG-เกวียน"]
+position = Vector2( 573.211, -34.2094 )
+texture = ExtResource( 9 )
+
+[node name="MG-เสาไฟฟ้า+สายไฟ2" type="Sprite2D" parent="."]
+position = Vector2( 4667.32, 421.178 )
+scale = Vector2( 0.786097, 0.472693 )
+texture = ExtResource( 17 )
+
+[node name="MG-เสาไฟฟ้า" type="Sprite2D" parent="MG-เสาไฟฟ้า+สายไฟ2"]
+position = Vector2( 447.782, 16.9243 )
+texture = ExtResource( 20 )
+
+[node name="MG-รั้วเสา2" type="Sprite2D" parent="."]
+position = Vector2( 6072.96, 486.917 )
+texture = ExtResource( 19 )
+
+[node name="MG-หญ้าเดี่ยว2" type="Sprite2D" parent="."]
+position = Vector2( 6182.37, 503.566 )
+texture = ExtResource( 15 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="."]
+position = Vector2( 6776.97, 501.188 )
+texture = ExtResource( 16 )
+
+[node name="MG-รั้วกลุ่ม2" type="Sprite2D" parent="."]
+position = Vector2( 6515.34, 489.295 )
+texture = ExtResource( 18 )
+
+[node name="MG-เสาไฟฟ้า" type="Sprite2D" parent="."]
+position = Vector2( 6708.07, 412.778 )
+scale = Vector2( 0.656772, 0.452517 )
+texture = ExtResource( 20 )
+
+[node name="MG-เถียงนา2" type="Sprite2D" parent="."]
+position = Vector2( 7138.74, 461.286 )
+scale = Vector2( 0.483023, 0.535323 )
+texture = ExtResource( 13 )
+
+[node name="MG-เสาไฟฟ้าเซต2" type="Sprite2D" parent="."]
+position = Vector2( 7639.94, 421.644 )
+scale = Vector2( 0.645083, 0.509399 )
+texture = ExtResource( 11 )
+
+[node name="MG-หญ้ากลุ่ม2" type="Sprite2D" parent="."]
+position = Vector2( 7528.56, 491.49 )
+texture = ExtResource( 16 )
+
+[node name="MG-กองฟาง3" type="Sprite2D" parent="."]
+position = Vector2( 8000.5, 459.399 )
+scale = Vector2( 0.560136, 0.544337 )
+texture = ExtResource( 9 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-กองฟาง3"]
+position = Vector2( 229.172, 38.1478 )
+texture = ExtResource( 9 )
+
+[node name="MG-เสาไฟฟ้าเซต3" type="Sprite2D" parent="."]
+position = Vector2( 8714.2, 374.224 )
+scale = Vector2( 0.754768, 0.630885 )
+texture = ExtResource( 11 )
+
+[node name="MG-หญ้าเดี่ยว" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต3"]
+position = Vector2( 578.23, 195.158 )
+texture = ExtResource( 15 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต3"]
+position = Vector2( 1058.44, 177.205 )
+texture = ExtResource( 16 )
+
+[node name="MG-หญ้ากลุ่ม2" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต3"]
+position = Vector2( 1658.7, 207.127 )
+texture = ExtResource( 16 )
+
+[node name="MG-เสาไฟฟ้าเซต" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต3"]
+position = Vector2( 1328.56, -2.32831 )
+texture = ExtResource( 11 )
+
+[node name="MG-เกวียน2" type="Sprite2D" parent="."]
+position = Vector2( 10344.4, 489.796 )
+scale = Vector2( 0.604732, 0.566746 )
+texture = ExtResource( 10 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-เกวียน2"]
+position = Vector2( 334.012, -46.632 )
+texture = ExtResource( 9 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-เกวียน2/MG-กองฟาง"]
+position = Vector2( 268.461, -6.66187 )
+texture = ExtResource( 9 )
+
+[node name="MG-เถียงนา" type="Sprite2D" parent="MG-เกวียน2/MG-กองฟาง/MG-กองฟาง"]
+position = Vector2( 387.081, -73.2787 )
+scale = Vector2( 0.922284, 1.28697 )
+texture = ExtResource( 13 )
+
+[node name="buf_root" parent="." instance=ExtResource( 21 )]
+position = Vector2( 1079.21, 571.144 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root2" parent="." instance=ExtResource( 21 )]
+position = Vector2( 1782.43, 553.683 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root3" parent="." instance=ExtResource( 21 )]
+position = Vector2( 2231.66, 142.546 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root4" parent="." instance=ExtResource( 21 )]
+position = Vector2( 3065.05, 540.983 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root5" parent="." instance=ExtResource( 21 )]
+position = Vector2( 4054.23, 308.79 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root6" parent="." instance=ExtResource( 21 )]
+position = Vector2( 4945.25, 548.534 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root7" parent="." instance=ExtResource( 21 )]
+position = Vector2( 6304.42, 348.433 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root8" parent="." instance=ExtResource( 21 )]
+position = Vector2( 7609.68, 526.423 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root9" parent="." instance=ExtResource( 21 )]
+position = Vector2( 9114.12, 539.136 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="buf_root10" parent="." instance=ExtResource( 21 )]
+position = Vector2( 10245.6, 505.233 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="Backwall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( 10.9473, 386.576 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( 5272.31, -858.426 )
+shape = SubResource( 2 )
+
+[node name="Backwall2" type="StaticBody2D" parent="."]
+position = Vector2( 11130.2, -135.918 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backwall2"]
+position = Vector2( 10.9473, 386.576 )
+shape = SubResource( 1 )
+
+[node name="Score" type="CanvasLayer" parent="."]
+scale = Vector2( 2, 2 )
+transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+
+[node name="Label" type="Label" parent="Score"]
+offset_left = 8.809
+offset_top = 8.09671
+offset_right = 103.808
+offset_bottom = 22.0967
+text = "enemied kill"
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer2"]
+offset_left = 5.92269
+offset_top = 568.05
+offset_right = 88.9227
+offset_bottom = 582.05
+text = "version: 4.00"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer3"]
+offset_left = 906.313
+offset_top = 9.77606
+offset_right = 1009.31
+offset_bottom = 23.7761
+text = "Level:farm_easy"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="finish_line" parent="." instance=ExtResource( 23 )]
+position = Vector2( 10634.7, 345.576 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="flying_blue" parent="." instance=ExtResource( 24 )]
+position = Vector2( 1416.19, 159.539 )
+
+[node name="flying_blue2" parent="." instance=ExtResource( 24 )]
+position = Vector2( 4584.19, 119.539 )
+
+[node name="flying_blue3" parent="." instance=ExtResource( 24 )]
+position = Vector2( 8456.19, 99.5388 )
+
+[node name="FG-street2-1+g" type="Sprite2D" parent="."]
+position = Vector2( 256.524, 813.998 )
+texture = ExtResource( 14 )
+
+[node name="FG-street3+g" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( 698.467, 1.88776 )
+texture = ExtResource( 26 )
+
+[node name="FG-street2-2+g" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( 419.08, 0 )
+texture = ExtResource( 32 )
+
+[node name="FG-street1+g" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( -275.611, 1.88776 )
+texture = ExtResource( 30 )
+
+[node name="FG-bridge1+g" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( 794.742, -52.8569 )
+texture = ExtResource( 27 )
+
+[node name="FG-bridge2-1" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( 1004.28, -179.336 )
+texture = ExtResource( 33 )
+
+[node name="FG-bridge2-2" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( 1002.39, -183.112 )
+texture = ExtResource( 28 )
+
+[node name="FG-bridge3" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( 1213.82, -194.438 )
+texture = ExtResource( 25 )
+
+[node name="FG-street2-2" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( 1553.62, -143.469 )
+texture = ExtResource( 29 )
+
+[node name="FG-street3" type="Sprite2D" parent="FG-street2-1+g"]
+position = Vector2( 1828.24, -140.006 )
+texture = ExtResource( 31 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street2-1+g"]
+position = Vector2( -10657.9, -806.738 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street2-1+g/StaticBody2D"]
+position = Vector2( 11433.3, 665.049 )
+shape = SubResource( 3 )
+
+[node name="FG-street2-1+g2" type="Sprite2D" parent="."]
+position = Vector2( 2728.57, 808.341 )
+texture = ExtResource( 14 )
+
+[node name="FG-street3+g" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( 698.467, 1.88776 )
+texture = ExtResource( 26 )
+
+[node name="FG-street2-2+g" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( 419.08, 0 )
+texture = ExtResource( 32 )
+
+[node name="FG-street1+g" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( -275.611, 1.88776 )
+texture = ExtResource( 30 )
+
+[node name="FG-bridge1+g" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( 794.742, -52.8569 )
+texture = ExtResource( 27 )
+
+[node name="FG-bridge2-1" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( 1004.28, -179.336 )
+texture = ExtResource( 33 )
+
+[node name="FG-bridge2-2" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( 1002.39, -183.112 )
+texture = ExtResource( 28 )
+
+[node name="FG-bridge3" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( 1213.82, -194.438 )
+texture = ExtResource( 25 )
+
+[node name="FG-street2-2" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( 1553.62, -143.469 )
+texture = ExtResource( 29 )
+
+[node name="FG-street3" type="Sprite2D" parent="FG-street2-1+g2"]
+position = Vector2( 1828.24, -140.006 )
+texture = ExtResource( 31 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street2-1+g2"]
+position = Vector2( -10657.9, -806.738 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street2-1+g2/StaticBody2D"]
+position = Vector2( 11433.3, 665.049 )
+shape = SubResource( 3 )
+
+[node name="FG-street2-1+g3" type="Sprite2D" parent="."]
+position = Vector2( 5124.25, 811.17 )
+texture = ExtResource( 14 )
+
+[node name="FG-street3+g" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( 698.467, 1.88776 )
+texture = ExtResource( 26 )
+
+[node name="FG-street2-2+g" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( 419.08, 0 )
+texture = ExtResource( 32 )
+
+[node name="FG-street1+g" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( -275.611, 1.88776 )
+texture = ExtResource( 30 )
+
+[node name="FG-bridge1+g" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( 794.742, -52.8569 )
+texture = ExtResource( 27 )
+
+[node name="FG-bridge2-1" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( 1004.28, -179.336 )
+texture = ExtResource( 33 )
+
+[node name="FG-bridge2-2" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( 1002.39, -183.112 )
+texture = ExtResource( 28 )
+
+[node name="FG-bridge3" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( 1213.82, -194.438 )
+texture = ExtResource( 25 )
+
+[node name="FG-street2-2" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( 1553.62, -143.469 )
+texture = ExtResource( 29 )
+
+[node name="FG-street3" type="Sprite2D" parent="FG-street2-1+g3"]
+position = Vector2( 1828.24, -140.006 )
+texture = ExtResource( 31 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street2-1+g3"]
+position = Vector2( -10657.9, -806.738 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street2-1+g3/StaticBody2D"]
+position = Vector2( 11433.3, 665.049 )
+shape = SubResource( 3 )
+
+[node name="FG-street2-1+g4" type="Sprite2D" parent="."]
+position = Vector2( 7586.39, 811.17 )
+texture = ExtResource( 14 )
+
+[node name="FG-street3+g" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( 698.467, 1.88776 )
+texture = ExtResource( 26 )
+
+[node name="FG-street2-2+g" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( 419.08, 0 )
+texture = ExtResource( 32 )
+
+[node name="FG-street1+g" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( -275.611, 1.88776 )
+texture = ExtResource( 30 )
+
+[node name="FG-bridge1+g" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( 794.742, -52.8569 )
+texture = ExtResource( 27 )
+
+[node name="FG-bridge2-1" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( 1004.28, -179.336 )
+texture = ExtResource( 33 )
+
+[node name="FG-bridge2-2" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( 1002.39, -183.112 )
+texture = ExtResource( 28 )
+
+[node name="FG-bridge3" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( 1213.82, -194.438 )
+texture = ExtResource( 25 )
+
+[node name="FG-street2-2" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( 1553.62, -143.469 )
+texture = ExtResource( 29 )
+
+[node name="FG-street3" type="Sprite2D" parent="FG-street2-1+g4"]
+position = Vector2( 1828.24, -140.006 )
+texture = ExtResource( 31 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street2-1+g4"]
+position = Vector2( -10657.9, -806.738 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street2-1+g4/StaticBody2D"]
+position = Vector2( 11433.3, 665.049 )
+shape = SubResource( 3 )
+
+[node name="FG-street2-1+g5" type="Sprite2D" parent="."]
+position = Vector2( 9927.45, 811.17 )
+texture = ExtResource( 14 )
+
+[node name="FG-street3+g" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( 698.467, 1.88776 )
+texture = ExtResource( 26 )
+
+[node name="FG-street2-2+g" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( 419.08, 0 )
+texture = ExtResource( 32 )
+
+[node name="FG-street1+g" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( -275.611, 1.88776 )
+texture = ExtResource( 30 )
+
+[node name="FG-bridge1+g" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( 794.742, -52.8569 )
+texture = ExtResource( 27 )
+
+[node name="FG-bridge2-1" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( 1004.28, -179.336 )
+texture = ExtResource( 33 )
+
+[node name="FG-bridge2-2" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( 1002.39, -183.112 )
+texture = ExtResource( 28 )
+
+[node name="FG-bridge3" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( 1213.82, -194.438 )
+texture = ExtResource( 25 )
+
+[node name="FG-street2-2" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( 1553.62, -143.469 )
+texture = ExtResource( 29 )
+
+[node name="FG-street3" type="Sprite2D" parent="FG-street2-1+g5"]
+position = Vector2( 1828.24, -140.006 )
+texture = ExtResource( 31 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street2-1+g5"]
+position = Vector2( -10657.9, -806.738 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street2-1+g5/StaticBody2D"]
+position = Vector2( 11433.3, 665.049 )
+shape = SubResource( 3 )

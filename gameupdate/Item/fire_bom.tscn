@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://soundsandmusic/bomm.ogg" type="AudioStream" id=1]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-fire.png" type="Texture2D" id=2]
+[ext_resource path="res://Item/fire_bom.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "BOM"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Bomb:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PackedFloat32Array( -9.15527e-05, -0.25, 0, 0.25, 0, -9.15527e-05, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PackedFloat32Array( 0, 0.5, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Bomb:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PackedFloat32Array( -3.05176e-05, -0.25, 0, 0.25, 0, -47.0902, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PackedFloat32Array( 0, 0.5, 1 )
+}
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 1.70527
+
+[node name="fire_bom" type="Node2D"]
+position = Vector2( 0.891296, -1.68173 )
+script = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/BOM = SubResource( 1 )
+
+[node name="Bomb" type="Sprite2D" parent="."]
+position = Vector2( -9.15527e-05, -42.1444 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="bomb5555" type="Area2D" parent="Bomb"]
+position = Vector2( 11.0906, -3.13346 )
+scale = Vector2( 0.558717, 1.07857 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bomb/bomb5555"]
+scale = Vector2( -115.308, 74.9874 )
+shape = SubResource( 2 )
+
+[node name="Soundbomb" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="body_entered" from="Bomb/bomb5555" to="." method="_on_bomb5555_body_entered"]

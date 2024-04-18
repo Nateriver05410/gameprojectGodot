@@ -1,0 +1,167 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Humvee/01-moving/2.png" type="Texture2D" id=1]
+[ext_resource path="res://Humvee/01-moving/4.png" type="Texture2D" id=2]
+[ext_resource path="res://Humvee/01-moving/6.png" type="Texture2D" id=3]
+[ext_resource path="res://Humvee/01-moving/3.png" type="Texture2D" id=4]
+[ext_resource path="res://Humvee/01-moving/5.png" type="Texture2D" id=5]
+[ext_resource path="res://Humvee/01-moving/1.png" type="Texture2D" id=6]
+[ext_resource path="res://Humvee/01-moving/8.png" type="Texture2D" id=7]
+[ext_resource path="res://Humvee/01-moving/7.png" type="Texture2D" id=8]
+[ext_resource path="res://Humvee/03-damaged/1.png" type="Texture2D" id=9]
+[ext_resource path="res://Humvee/03-damaged/3.png" type="Texture2D" id=10]
+[ext_resource path="res://Humvee/02-shoot/1.png" type="Texture2D" id=11]
+[ext_resource path="res://Humvee/02-shoot/2.png" type="Texture2D" id=12]
+[ext_resource path="res://Humvee/03-damaged/4.png" type="Texture2D" id=13]
+[ext_resource path="res://Humvee/04-broke/1.png" type="Texture2D" id=14]
+[ext_resource path="res://Humvee/04-broke/3.png" type="Texture2D" id=15]
+[ext_resource path="res://Humvee/02-shoot/3.png" type="Texture2D" id=16]
+[ext_resource path="res://Humvee/03-damaged/2.png" type="Texture2D" id=17]
+[ext_resource path="res://Humvee/04-broke/2.png" type="Texture2D" id=18]
+[ext_resource path="res://humvee.gd" type="Script" id=19]
+[ext_resource path="res://bullet/LifeBar.tscn" type="PackedScene" id=20]
+[ext_resource path="res://soundsandmusic/sounds/jump1.ogg" type="AudioStream" id=21]
+[ext_resource path="res://soundsandmusic/bomm.ogg" type="AudioStream" id=22]
+[ext_resource path="res://you_lose.wav" type="AudioStream" id=23]
+[ext_resource path="res://kill_it.wav" type="AudioStream" id=24]
+[ext_resource path="res://soundsandmusic/music/bensound-dance.mp3" type="AudioStream" id=25]
+[ext_resource path="res://shoottest01.wav" type="AudioStream" id=26]
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=27]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 16 ) ],
+"loop": false,
+"name": "shoot",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 18 ), ExtResource( 15 ) ],
+"loop": false,
+"name": "broke",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 17 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 6 ) ],
+"loop": false,
+"name": "damaged",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "moving",
+"speed": 8.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 28.8912, 13.7102 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 42.3622, 250.521 )
+
+[sub_resource type="FontFile" id=4]
+size = 73
+font_data = ExtResource( 27 )
+
+[node name="cha" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 30
+script = ExtResource( 19 )
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2( -19.5066, -22.6786 )
+scale = Vector2( 0.25, 0.25 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -18.5768, 5.34342 )
+scale = Vector2( 6.87358, 7.38296 )
+shape = SubResource( 2 )
+
+[node name="cha" type="Area2D" parent="CollisionShape2D"]
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/cha"]
+position = Vector2( -0.119628, 0.0247345 )
+scale = Vector2( 0.686247, 0.0559712 )
+shape = SubResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2( 117.243, -132.973 )
+scale = Vector2( 0.58337, 0.3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 112, -118 )
+current = true
+limit_top = 0
+editor_draw_limits = true
+
+[node name="Lbar" type="Node2D" parent="."]
+z_index = 5
+
+[node name="LifeBar" parent="Lbar" instance=ExtResource( 20 )]
+offset_left = -211.58
+offset_top = -208.182
+offset_right = 157.42
+offset_bottom = -174.182
+max_value = 130.0
+value = 130.0
+
+[node name="Label" type="Label" parent="Lbar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -81.7731
+offset_top = -223.318
+offset_right = 278.227
+offset_bottom = -134.318
+custom_minimum_size = Vector2( 360, 60 )
+scale = Vector2( 0.8, 0.8 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = SubResource( 4 )
+text = "Play"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="soundtest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+bus = "SFX"
+
+[node name="bombsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+bus = "SFX"
+
+[node name="Bot_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+bus = "SFX"
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
+bus = "SFX"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="bgsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -5.048
+
+[node name="finish_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+bus = "SFX"
+
+[connection signal="area_entered" from="CollisionShape2D/cha" to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

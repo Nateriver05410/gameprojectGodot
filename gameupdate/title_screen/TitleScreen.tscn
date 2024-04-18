@@ -1,0 +1,124 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://title_screen/title_Screen.gd" type="Script" id=1]
+[ext_resource path="res://title_screen/car1.png" type="Texture2D" id=2]
+[ext_resource path="res://title_screen/car2.png" type="Texture2D" id=3]
+[ext_resource path="res://title_screen/buttons/Play.tscn" type="PackedScene" id=4]
+[ext_resource path="res://title_screen/000EX.png" type="Texture2D" id=5]
+[ext_resource path="res://title_screen/moto.png" type="Texture2D" id=6]
+[ext_resource path="res://title_screen/fade_in/FadeIn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=8]
+[ext_resource path="res://title_screen/blue.png" type="Texture2D" id=9]
+[ext_resource path="res://title_screen/red.png" type="Texture2D" id=10]
+[ext_resource path="res://title_screen/yellow.png" type="Texture2D" id=11]
+[ext_resource path="res://title_screen/buttons/Exit.tscn" type="PackedScene" id=12]
+[ext_resource path="res://title_screen/buttons/Setting.tscn" type="PackedScene" id=13]
+[ext_resource path="res://soundsandmusic/music/bensound-dance.mp3" type="AudioStream" id=14]
+
+[sub_resource type="FontFile" id=1]
+size = 157
+font_data = ExtResource( 8 )
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.1748
+offset_top = 1.5874
+offset_right = 3.1748
+offset_bottom = 1.5874
+scale = Vector2( 0.995043, 1.09016 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="000EX2" type="Sprite2D" parent="."]
+position = Vector2( 641.579, 375.162 )
+texture = ExtResource( 5 )
+
+[node name="blue" type="Sprite2D" parent="000EX2"]
+position = Vector2( 213.961, -71.064 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+
+[node name="red" type="Sprite2D" parent="000EX2/blue"]
+position = Vector2( 418.157, 713.519 )
+texture = ExtResource( 10 )
+
+[node name="yellow" type="Sprite2D" parent="000EX2/blue"]
+position = Vector2( -659.984, 281.263 )
+texture = ExtResource( 11 )
+
+[node name="car2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2( 728.079, 420.411 )
+rotation = 0.214736
+scale = Vector2( 0.197894, 0.206594 )
+texture = ExtResource( 3 )
+
+[node name="car1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2( 120.456, 458.846 )
+rotation = -0.676766
+scale = Vector2( 0.201055, 0.20352 )
+texture = ExtResource( 2 )
+
+[node name="FadeIn" parent="." instance=ExtResource( 7 )]
+offset_left = -3.64343
+offset_top = -1.68856
+offset_right = 2.35657
+offset_bottom = 2.31146
+clip_contents = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.8439
+offset_top = 42.1961
+offset_right = 1242.84
+offset_bottom = 202.196
+scale = Vector2( 0.75, 0.75 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 20
+theme_override_fonts/font = SubResource( 1 )
+text = "Escape war zone "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="moto" type="Sprite2D" parent="."]
+visible = false
+position = Vector2( 286.015, 383.098 )
+rotation = -0.557532
+scale = Vector2( 0.119372, 0.119372 )
+texture = ExtResource( 6 )
+
+[node name="Play" parent="." instance=ExtResource( 4 )]
+offset_left = 384.154
+offset_top = 239.892
+offset_right = 744.154
+offset_bottom = 322.892
+custom_minimum_size = Vector2( 360, 60 )
+scale = Vector2( 1.00191, 1.01226 )
+pivot_offset = Vector2( -94.5597, 215.354 )
+text = "Play"
+
+[node name="Exit" parent="." instance=ExtResource( 12 )]
+offset_left = 609.0
+offset_top = 448.0
+offset_right = 1001.0
+offset_bottom = 527.0
+
+[node name="Option" parent="." instance=ExtResource( 13 )]
+offset_left = 10.0
+offset_top = 454.0
+offset_right = 309.0
+offset_bottom = 538.0
+
+[node name="bgsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -5.048
+bus = "Music"
+
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Option" to="." method="_on_Option_pressed"]

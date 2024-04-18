@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://01_DAM/asset/car1.png" type="Texture2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 263.803, 214.585 )
+
+[node name="Car01" type="Node2D"]
+
+[node name="car1" type="Sprite2D" parent="."]
+position = Vector2( -11.4303, 49.6475 )
+scale = Vector2( 0.740659, 0.734417 )
+texture = ExtResource( 1 )
+
+[node name="carnao" type="Area2D" parent="car1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="car1/carnao"]
+position = Vector2( 0.295285, 18.2272 )
+shape = SubResource( 1 )

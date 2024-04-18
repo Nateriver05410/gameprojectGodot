@@ -1,0 +1,352 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-sky.png" type="Texture2D" id=1]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-field.png" type="Texture2D" id=2]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-shadow6.png" type="Texture2D" id=3]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-factory.png" type="Texture2D" id=4]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-shadow2.png" type="Texture2D" id=5]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-shadow3.png" type="Texture2D" id=6]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-shadow1.png" type="Texture2D" id=7]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-fire.png" type="Texture2D" id=8]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-giant sign.png" type="Texture2D" id=9]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-wheels.png" type="Texture2D" id=10]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-wire fence1.png" type="Texture2D" id=11]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-wire fence2.png" type="Texture2D" id=12]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-guard rail.png" type="Texture2D" id=13]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-kilometer sign.png" type="Texture2D" id=14]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-wire.png" type="Texture2D" id=15]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/FG-street3.png" type="Texture2D" id=16]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/FG-street22+g.png" type="Texture2D" id=17]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/FG-street21+g.png" type="Texture2D" id=18]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/FG-street1.png" type="Texture2D" id=19]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/FG-street1+g.png" type="Texture2D" id=20]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/FG-street2.png" type="Texture2D" id=21]
+[ext_resource path="res://bullet/finish line.tscn" type="PackedScene" id=22]
+[ext_resource path="res://bullet/flying_blue.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Item/fire_bom.tscn" type="PackedScene" id=24]
+[ext_resource path="res://TestNewMap.gd" type="Script" id=25]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 541.929, 70.938 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1004.22, 26.5674 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 43.3538, 1056.95 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5699.88, 177.759 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -2, -9.55096 )
+script = ExtResource( 25 )
+
+[node name="BG-sky" type="Sprite2D" parent="."]
+position = Vector2( 1162.27, -530.58 )
+scale = Vector2( 0.541215, 1.95161 )
+texture = ExtResource( 1 )
+
+[node name="BG-sky2" type="Sprite2D" parent="."]
+position = Vector2( 8077.69, -486.782 )
+scale = Vector2( 0.421863, 1.97901 )
+texture = ExtResource( 1 )
+
+[node name="BG-sky3" type="Sprite2D" parent="."]
+position = Vector2( 4857.25, -517.562 )
+scale = Vector2( 0.421863, 1.95349 )
+texture = ExtResource( 1 )
+
+[node name="BG-shadow6" type="Sprite2D" parent="."]
+position = Vector2( 363.444, 472.241 )
+scale = Vector2( 0.767596, 0.804984 )
+texture = ExtResource( 3 )
+
+[node name="BG-shadow1" type="Sprite2D" parent="."]
+position = Vector2( 3067.54, 451.407 )
+scale = Vector2( 0.575763, 0.566407 )
+texture = ExtResource( 7 )
+
+[node name="BG-factory" type="Sprite2D" parent="."]
+position = Vector2( 1330.17, 120.237 )
+scale = Vector2( 0.750924, 1.0968 )
+texture = ExtResource( 4 )
+
+[node name="BG-shadow2" type="Sprite2D" parent="."]
+position = Vector2( 4020.76, 454.085 )
+texture = ExtResource( 5 )
+
+[node name="BG-shadow3" type="Sprite2D" parent="BG-shadow2"]
+position = Vector2( 1574.74, -41.8678 )
+texture = ExtResource( 6 )
+
+[node name="BG-factory" type="Sprite2D" parent="BG-shadow2"]
+position = Vector2( 1414.31, -389.577 )
+scale = Vector2( 0.980661, 1.31294 )
+texture = ExtResource( 4 )
+
+[node name="BG-shadow3" type="Sprite2D" parent="."]
+position = Vector2( 7619.4, 456.344 )
+texture = ExtResource( 5 )
+
+[node name="BG-shadow4" type="Sprite2D" parent="."]
+position = Vector2( 8797.52, 397.014 )
+texture = ExtResource( 7 )
+
+[node name="BG-field" type="Sprite2D" parent="."]
+position = Vector2( 4403.9, 644.922 )
+scale = Vector2( 1.38435, 0.830103 )
+texture = ExtResource( 2 )
+
+[node name="MG-wheels" type="Sprite2D" parent="BG-field"]
+position = Vector2( -1126.28, -152.09 )
+scale = Vector2( 0.339715, 0.526349 )
+texture = ExtResource( 10 )
+
+[node name="MG-wire fence1" type="Sprite2D" parent="BG-field"]
+position = Vector2( -1101.19, -171.863 )
+scale = Vector2( 0.768376, 0.690552 )
+texture = ExtResource( 11 )
+
+[node name="MG-guard rail" type="Sprite2D" parent="."]
+position = Vector2( 2916.99, 536.425 )
+scale = Vector2( 0.647851, 0.628639 )
+texture = ExtResource( 13 )
+
+[node name="MG-kilometer sign" type="Sprite2D" parent="."]
+position = Vector2( 7288.52, 509.748 )
+texture = ExtResource( 14 )
+
+[node name="MG-guard rail2" type="Sprite2D" parent="."]
+position = Vector2( 7761.04, 524.581 )
+scale = Vector2( 0.863922, 0.69895 )
+texture = ExtResource( 13 )
+
+[node name="MG-giant sign2" type="Sprite2D" parent="."]
+position = Vector2( 8250.52, 429.229 )
+scale = Vector2( 0.577973, 0.727688 )
+texture = ExtResource( 9 )
+
+[node name="MG-fire" type="Sprite2D" parent="."]
+position = Vector2( 8858.27, 503.454 )
+scale = Vector2( 0.786311, 0.552535 )
+texture = ExtResource( 8 )
+
+[node name="MG-wheels" type="Sprite2D" parent="."]
+position = Vector2( 9170.48, 502.706 )
+scale = Vector2( 0.77606, 0.841292 )
+texture = ExtResource( 10 )
+
+[node name="MG-wire fence2" type="Sprite2D" parent="."]
+position = Vector2( 9064.54, 521.8 )
+scale = Vector2( 1.44345, 0.662098 )
+texture = ExtResource( 12 )
+
+[node name="MG-guard rail3" type="Sprite2D" parent="."]
+position = Vector2( 555.321, 508.421 )
+scale = Vector2( 0.562691, 0.464481 )
+texture = ExtResource( 13 )
+
+[node name="MG-wire" type="Sprite2D" parent="MG-guard rail3"]
+position = Vector2( 581.136, 23.6825 )
+texture = ExtResource( 15 )
+
+[node name="FG-street1" type="Sprite2D" parent="."]
+position = Vector2( 82.6016, 617.185 )
+texture = ExtResource( 19 )
+
+[node name="FG-street3" type="Sprite2D" parent="FG-street1"]
+position = Vector2( 837.34, -2.90436 )
+texture = ExtResource( 16 )
+
+[node name="FG-street2" type="Sprite2D" parent="FG-street1"]
+position = Vector2( 411.233, -1.82813 )
+texture = ExtResource( 21 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1"]
+position = Vector2( -12339.5, -609.965 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1/StaticBody2D"]
+position = Vector2( 12763.4, 629.128 )
+shape = SubResource( 1 )
+
+[node name="MG-kilometer sign" type="Sprite2D" parent="FG-street1"]
+position = Vector2( 2715.45, -141.58 )
+texture = ExtResource( 14 )
+
+[node name="MG-wheels" type="Sprite2D" parent="FG-street1"]
+position = Vector2( 2643.06, -135.764 )
+texture = ExtResource( 10 )
+
+[node name="FG-street2" type="Sprite2D" parent="."]
+position = Vector2( 7970.52, 727.571 )
+texture = ExtResource( 19 )
+
+[node name="FG-street3" type="Sprite2D" parent="FG-street2"]
+position = Vector2( 837.34, -2.90436 )
+texture = ExtResource( 16 )
+
+[node name="FG-street2" type="Sprite2D" parent="FG-street2"]
+position = Vector2( 411.233, -1.82813 )
+texture = ExtResource( 21 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street2"]
+position = Vector2( -12339.5, -609.965 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street2/StaticBody2D"]
+position = Vector2( 12763.4, 629.128 )
+shape = SubResource( 1 )
+
+[node name="FG-street3" type="Sprite2D" parent="."]
+position = Vector2( 8971.78, 727.571 )
+texture = ExtResource( 19 )
+
+[node name="FG-street3" type="Sprite2D" parent="FG-street3"]
+position = Vector2( 837.34, -2.90436 )
+texture = ExtResource( 16 )
+
+[node name="FG-street2" type="Sprite2D" parent="FG-street3"]
+position = Vector2( 411.233, -1.82813 )
+texture = ExtResource( 21 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street3"]
+position = Vector2( -12339.5, -609.965 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street3/StaticBody2D"]
+position = Vector2( 12763.4, 629.128 )
+shape = SubResource( 1 )
+
+[node name="FG-street1+g" type="Sprite2D" parent="."]
+position = Vector2( 1459.69, 740.302 )
+texture = ExtResource( 20 )
+
+[node name="FG-street22+g" type="Sprite2D" parent="FG-street1+g"]
+position = Vector2( 1475.76, -0.465393 )
+texture = ExtResource( 17 )
+
+[node name="FG-street21+g" type="Sprite2D" parent="FG-street1+g"]
+position = Vector2( 585.202, -0.00012207 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1+g"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1+g/StaticBody2D"]
+position = Vector2( 904.082, -139.849 )
+shape = SubResource( 2 )
+
+[node name="FG-street1+g2" type="Sprite2D" parent="."]
+position = Vector2( 3438.53, 747.437 )
+texture = ExtResource( 20 )
+
+[node name="FG-street22+g" type="Sprite2D" parent="FG-street1+g2"]
+position = Vector2( 1475.76, -0.465393 )
+texture = ExtResource( 17 )
+
+[node name="FG-street21+g" type="Sprite2D" parent="FG-street1+g2"]
+position = Vector2( 585.202, -0.00012207 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1+g2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1+g2/StaticBody2D"]
+position = Vector2( 887.47, -147.886 )
+shape = SubResource( 2 )
+
+[node name="FG-street1+g3" type="Sprite2D" parent="."]
+position = Vector2( 5828.84, 745.058 )
+texture = ExtResource( 20 )
+
+[node name="FG-street22+g" type="Sprite2D" parent="FG-street1+g3"]
+position = Vector2( 1475.76, -0.465393 )
+texture = ExtResource( 17 )
+
+[node name="FG-street21+g" type="Sprite2D" parent="FG-street1+g3"]
+position = Vector2( 585.202, -0.00012207 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1+g3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1+g3/StaticBody2D"]
+position = Vector2( 904.082, -139.849 )
+shape = SubResource( 2 )
+
+[node name="Backwall" type="StaticBody2D" parent="."]
+position = Vector2( 11.1118, 60.3212 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( -29.1152, -111.056 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( 9386.24, 64.1789 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( 4833.89, -1126.77 )
+shape = SubResource( 4 )
+
+[node name="flyring_blue2" parent="." instance=ExtResource( 23 )]
+position = Vector2( 5031, 211.349 )
+scale = Vector2( 0.149921, 0.152945 )
+
+[node name="flyring_blue3" parent="." instance=ExtResource( 23 )]
+position = Vector2( 6909.4, 158.982 )
+scale = Vector2( 0.149921, 0.152945 )
+
+[node name="finish_line" parent="." instance=ExtResource( 22 )]
+position = Vector2( 8514.54, 420.535 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Score" type="CanvasLayer" parent="."]
+scale = Vector2( 2, 2 )
+transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+
+[node name="Label" type="Label" parent="Score"]
+offset_left = 8.809
+offset_top = 8.09671
+offset_right = 103.808
+offset_bottom = 22.0967
+text = "enemied kill"
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer2"]
+offset_left = 5.92269
+offset_top = 568.05
+offset_right = 88.9227
+offset_bottom = 582.05
+text = "version: 4.00"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer3"]
+offset_left = 906.313
+offset_top = 9.77606
+offset_right = 1009.31
+offset_bottom = 23.7761
+text = "Level:fac_easy"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="fire_bom" parent="." instance=ExtResource( 24 )]
+position = Vector2( 1569.67, 507.003 )
+
+[node name="fire_bom2" parent="." instance=ExtResource( 24 )]
+position = Vector2( 3712.25, 210.338 )
+
+[node name="fire_bom3" parent="." instance=ExtResource( 24 )]
+position = Vector2( 5582.14, 527.979 )
+
+[node name="fire_bom4" parent="." instance=ExtResource( 24 )]
+position = Vector2( 7224.28, 518.989 )
+
+[node name="flying_blue" parent="." instance=ExtResource( 23 )]
+position = Vector2( 2944.41, 167.338 )

@@ -1,0 +1,139 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-sky.png" type="Texture2D" id=1]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-field.png" type="Texture2D" id=2]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-shadow6.png" type="Texture2D" id=3]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-factory.png" type="Texture2D" id=4]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-shadow2.png" type="Texture2D" id=5]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-shadow3.png" type="Texture2D" id=6]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-shadow1.png" type="Texture2D" id=7]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-fire.png" type="Texture2D" id=8]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-giant sign.png" type="Texture2D" id=9]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-wheels.png" type="Texture2D" id=10]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-wire fence1.png" type="Texture2D" id=11]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-wire fence2.png" type="Texture2D" id=12]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-guard rail.png" type="Texture2D" id=13]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-kilometer sign.png" type="Texture2D" id=14]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/MG-wire.png" type="Texture2D" id=15]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 0, -7.55096 )
+
+[node name="BG-sky" type="Sprite2D" parent="."]
+position = Vector2( 1620.58, 263.161 )
+scale = Vector2( 0.421863, 0.481721 )
+texture = ExtResource( 1 )
+
+[node name="BG-sky2" type="Sprite2D" parent="."]
+position = Vector2( 8077.69, 294.207 )
+scale = Vector2( 0.421863, 0.532733 )
+texture = ExtResource( 1 )
+
+[node name="BG-sky3" type="Sprite2D" parent="."]
+position = Vector2( 4857.25, 270.839 )
+scale = Vector2( 0.421863, 0.493493 )
+texture = ExtResource( 1 )
+
+[node name="BG-shadow6" type="Sprite2D" parent="."]
+position = Vector2( 363.444, 472.241 )
+scale = Vector2( 0.767596, 0.804984 )
+texture = ExtResource( 3 )
+
+[node name="BG-shadow1" type="Sprite2D" parent="."]
+position = Vector2( 3067.54, 451.407 )
+scale = Vector2( 0.575763, 0.566407 )
+texture = ExtResource( 7 )
+
+[node name="BG-factory" type="Sprite2D" parent="."]
+position = Vector2( 1646.51, 329.476 )
+scale = Vector2( 0.575763, 0.566407 )
+texture = ExtResource( 4 )
+
+[node name="BG-shadow2" type="Sprite2D" parent="."]
+position = Vector2( 4020.76, 454.085 )
+texture = ExtResource( 5 )
+
+[node name="BG-shadow3" type="Sprite2D" parent="BG-shadow2"]
+position = Vector2( 1574.74, -41.8678 )
+texture = ExtResource( 6 )
+
+[node name="BG-factory" type="Sprite2D" parent="BG-shadow2"]
+position = Vector2( 1570.09, -138.985 )
+scale = Vector2( 0.894406, 0.67773 )
+texture = ExtResource( 4 )
+
+[node name="BG-shadow3" type="Sprite2D" parent="."]
+position = Vector2( 7619.4, 456.344 )
+texture = ExtResource( 5 )
+
+[node name="BG-shadow4" type="Sprite2D" parent="."]
+position = Vector2( 8797.52, 397.014 )
+texture = ExtResource( 7 )
+
+[node name="BG-field" type="Sprite2D" parent="."]
+position = Vector2( 4856.64, 644.922 )
+scale = Vector2( 1.26645, 0.830103 )
+texture = ExtResource( 2 )
+
+[node name="MG-wheels" type="Sprite2D" parent="BG-field"]
+position = Vector2( -1126.28, -152.09 )
+scale = Vector2( 0.339715, 0.526349 )
+texture = ExtResource( 10 )
+
+[node name="MG-fire2" type="Sprite2D" parent="BG-field"]
+position = Vector2( -1244.93, -188.168 )
+scale = Vector2( 0.323801, 0.567621 )
+texture = ExtResource( 8 )
+
+[node name="MG-wire fence1" type="Sprite2D" parent="BG-field"]
+position = Vector2( -1101.19, -171.863 )
+scale = Vector2( 0.768376, 0.690552 )
+texture = ExtResource( 11 )
+
+[node name="MG-guard rail" type="Sprite2D" parent="."]
+position = Vector2( 2916.99, 536.425 )
+scale = Vector2( 0.647851, 0.628639 )
+texture = ExtResource( 13 )
+
+[node name="MG-kilometer sign" type="Sprite2D" parent="."]
+position = Vector2( 7288.52, 509.748 )
+texture = ExtResource( 14 )
+
+[node name="MG-guard rail2" type="Sprite2D" parent="."]
+position = Vector2( 7761.04, 524.581 )
+scale = Vector2( 0.863922, 0.69895 )
+texture = ExtResource( 13 )
+
+[node name="MG-giant sign2" type="Sprite2D" parent="."]
+position = Vector2( 8250.52, 429.229 )
+scale = Vector2( 0.577973, 0.727688 )
+texture = ExtResource( 9 )
+
+[node name="MG-fire" type="Sprite2D" parent="."]
+position = Vector2( 8858.27, 503.454 )
+scale = Vector2( 0.786311, 0.552535 )
+texture = ExtResource( 8 )
+
+[node name="MG-wheels" type="Sprite2D" parent="."]
+position = Vector2( 9170.48, 502.706 )
+scale = Vector2( 0.77606, 0.841292 )
+texture = ExtResource( 10 )
+
+[node name="MG-wire fence2" type="Sprite2D" parent="."]
+position = Vector2( 9064.54, 521.8 )
+scale = Vector2( 1.44345, 0.662098 )
+texture = ExtResource( 12 )
+
+[node name="MG-guard rail3" type="Sprite2D" parent="."]
+position = Vector2( 555.321, 508.421 )
+scale = Vector2( 0.562691, 0.464481 )
+texture = ExtResource( 13 )
+
+[node name="MG-wire" type="Sprite2D" parent="MG-guard rail3"]
+position = Vector2( 581.136, 23.6825 )
+texture = ExtResource( 15 )
+
+[node name="MG-fire2" type="Sprite2D" parent="."]
+position = Vector2( 220.802, 467.938 )
+scale = Vector2( 0.47444, 0.506966 )
+texture = ExtResource( 8 )

@@ -1,0 +1,157 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://shoottest01.wav" type="AudioStream" id=1]
+[ext_resource path="res://you_lose.wav" type="AudioStream" id=2]
+[ext_resource path="res://kill_it.wav" type="AudioStream" id=3]
+[ext_resource path="res://Tank/02-shoot/9.png" type="Texture2D" id=4]
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=5]
+[ext_resource path="res://Tank/02-shoot/11.png" type="Texture2D" id=6]
+[ext_resource path="res://Tank/03-damaged/1.png" type="Texture2D" id=7]
+[ext_resource path="res://Tank/03-damaged/3.png" type="Texture2D" id=8]
+[ext_resource path="res://Tank/03-damaged/4.png" type="Texture2D" id=9]
+[ext_resource path="res://Tank/02-shoot/10.png" type="Texture2D" id=10]
+[ext_resource path="res://Tank/04-broke/1.png" type="Texture2D" id=12]
+[ext_resource path="res://Tank/04-broke/2.png" type="Texture2D" id=14]
+[ext_resource path="res://Tank/04-broke/3.png" type="Texture2D" id=15]
+[ext_resource path="res://Tank/01-moving/1.png" type="Texture2D" id=17]
+[ext_resource path="res://Tank/01-moving/2.png" type="Texture2D" id=20]
+[ext_resource path="res://Tank/03-damaged/2.png" type="Texture2D" id=21]
+[ext_resource path="res://bullet/LifeBar.tscn" type="PackedScene" id=22]
+[ext_resource path="res://soundsandmusic/bomm.ogg" type="AudioStream" id=23]
+[ext_resource path="res://soundsandmusic/sounds/jump1.ogg" type="AudioStream" id=24]
+[ext_resource path="res://soundsandmusic/music/bensound-dance.mp3" type="AudioStream" id=27]
+[ext_resource path="res://Tank.gd" type="Script" id=28]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 6 ) ],
+"loop": false,
+"name": "shoot",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "damaged",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": false,
+"name": "broke",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "moving",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 211.124, 67.4608 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 239.898, 86.5487 )
+
+[sub_resource type="FontFile" id=4]
+size = 73
+font_data = ExtResource( 5 )
+
+[node name="cha" type="CharacterBody2D"]
+position = Vector2( 0, 5.99323 )
+collision_layer = 3
+collision_mask = 30
+script = ExtResource( 28 )
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+frames = SubResource( 1 )
+animation = "moving"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -38.751, -19.5271 )
+shape = SubResource( 2 )
+
+[node name="cha" type="Area2D" parent="CollisionShape2D"]
+position = Vector2( -1.74416, -1.31483 )
+scale = Vector2( 0.874451, 0.780104 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/cha"]
+position = Vector2( 3.40927, 3.91331 )
+shape = SubResource( 3 )
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2( 213.41, -43.8775 )
+scale = Vector2( 0.58337, 0.3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 110, -70 )
+current = true
+limit_top = 0
+editor_draw_limits = true
+
+[node name="Lbar" type="Node2D" parent="."]
+position = Vector2( -5.04541, 1.41422 )
+z_index = 5
+
+[node name="LifeBar" parent="Lbar" instance=ExtResource( 22 )]
+offset_left = -199.847
+offset_top = -137.282
+offset_right = 169.153
+offset_bottom = -103.282
+max_value = 200.0
+value = 200.0
+
+[node name="Label" type="Label" parent="Lbar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -79.2723
+offset_top = -151.409
+offset_right = 280.728
+offset_bottom = -62.409
+custom_minimum_size = Vector2( 360, 60 )
+scale = Vector2( 0.8, 0.8 )
+theme_override_fonts/font = SubResource( 4 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 5
+text = "Play"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="soundtest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+bus = "SFX"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="soundtest2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+bus = "SFX"
+
+[node name="bombsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+bus = "SFX"
+
+[node name="Bot_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+bus = "SFX"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="bgsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
+volume_db = -5.048
+
+[node name="finish_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+bus = "SFX"
+
+[connection signal="area_entered" from="CollisionShape2D/cha" to="." method="_on_cha_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

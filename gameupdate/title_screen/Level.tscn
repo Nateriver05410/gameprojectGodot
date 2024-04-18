@@ -1,0 +1,168 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://title_screen/Level.gd" type="Script" id=1]
+[ext_resource path="res://title_screen/buttons/factory.tscn" type="PackedScene" id=2]
+[ext_resource path="res://title_screen/buttons/Dam.tscn" type="PackedScene" id=3]
+[ext_resource path="res://title_screen/buttons/farm.tscn" type="PackedScene" id=4]
+[ext_resource path="res://title_screen/000EX.png" type="Texture2D" id=5]
+[ext_resource path="res://title_screen/buttons/petroleum.tscn" type="PackedScene" id=6]
+[ext_resource path="res://title_screen/fade_in/FadeIn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=8]
+[ext_resource path="res://03_peto/BG-Petroleum Rig.png" type="Texture2D" id=9]
+[ext_resource path="res://01_DAM/asset/dam.png" type="Texture2D" id=10]
+[ext_resource path="res://04-นิคมอุตสาหกรรมโรงถลุงเหล็ก/BG-factory.png" type="Texture2D" id=11]
+[ext_resource path="res://02_farm/MG-เถียงนา.png" type="Texture2D" id=12]
+[ext_resource path="res://title_screen/back.tscn" type="PackedScene" id=13]
+[ext_resource path="res://soundsandmusic/music/bensound-dance.mp3" type="AudioStream" id=14]
+[ext_resource path="res://shoottest01.wav" type="AudioStream" id=15]
+
+[sub_resource type="FontFile" id=1]
+size = 157
+font_data = ExtResource( 8 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.1748
+offset_top = 1.5874
+offset_right = 3.1748
+offset_bottom = 1.5874
+scale = Vector2( 0.995043, 1.09016 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="000EX" type="Sprite2D" parent="."]
+position = Vector2( 974.283, 468.222 )
+scale = Vector2( 1.22056, 1.2737 )
+texture = ExtResource( 5 )
+
+[node name="Menu" type="VBoxContainer" parent="."]
+offset_left = 146.684
+offset_top = 99.6422
+offset_right = 1186.68
+offset_bottom = 659.642
+scale = Vector2( 0.991049, 1.03082 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+offset_right = 1039.0
+offset_bottom = 559.0
+size_flags_vertical = 3
+alignment = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
+offset_right = 1039.0
+offset_bottom = 559.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu/CenterRow"]
+visible = false
+offset_left = 521.0
+offset_right = 1039.0
+offset_bottom = 559.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FadeIn" parent="." instance=ExtResource( 7 )]
+offset_left = 4.37158
+offset_top = -6.29
+offset_right = 10.3715
+offset_bottom = -2.28998
+clip_contents = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.8439
+offset_top = 42.1961
+offset_right = 1242.84
+offset_bottom = 202.196
+scale = Vector2( 0.75, 0.75 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 20
+theme_override_fonts/font = SubResource( 1 )
+text = "Escape war zone "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="farm" parent="." instance=ExtResource( 4 )]
+offset_left = 712.961
+offset_top = 452.984
+offset_right = 1149.96
+offset_bottom = 539.984
+scale = Vector2( 0.5, 0.5 )
+
+[node name="MG-เถียงนา" type="Sprite2D" parent="farm"]
+position = Vector2( 233.35, -107.658 )
+scale = Vector2( 0.593542, 0.593321 )
+texture = ExtResource( 12 )
+
+[node name="petroleum" parent="." instance=ExtResource( 6 )]
+offset_left = 731.747
+offset_top = 276.587
+offset_right = 1128.75
+offset_bottom = 355.587
+scale = Vector2( 0.5, 0.5 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="petroleum"]
+position = Vector2( 194.263, -71.9595 )
+scale = Vector2( 0.219667, 0.219667 )
+texture = ExtResource( 9 )
+
+[node name="factory" parent="." instance=ExtResource( 2 )]
+offset_left = 167.184
+offset_top = 469.783
+offset_right = 459.184
+offset_bottom = 548.783
+scale = Vector2( 0.5, 0.5 )
+
+[node name="BG-factory" type="Sprite2D" parent="factory"]
+position = Vector2( 201.199, -93.9563 )
+scale = Vector2( 0.229743, 0.229743 )
+texture = ExtResource( 11 )
+
+[node name="Dam" parent="." instance=ExtResource( 3 )]
+offset_left = 221.49
+offset_top = 294.549
+offset_right = 413.49
+offset_bottom = 373.549
+scale = Vector2( 0.5, 0.5 )
+
+[node name="dam" type="Sprite2D" parent="Dam"]
+position = Vector2( 73.4179, -85.6937 )
+scale = Vector2( 0.368653, 0.368653 )
+texture = ExtResource( 10 )
+
+[node name="back" parent="." instance=ExtResource( 13 )]
+offset_left = 923.976
+offset_top = 496.153
+offset_right = 1110.98
+offset_bottom = 578.153
+scale = Vector2( 0.5, 0.5 )
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+bus = "SFX"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="bgsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -5.048
+bus = "Music"
+
+[connection signal="tree_entered" from="Menu/CenterRow/Buttons" to="." method="_on_Buttons_tree_entered"]
+[connection signal="pressed" from="farm" to="." method="_on_farm_pressed"]
+[connection signal="pressed" from="petroleum" to="." method="_on_petroleum_pressed"]
+[connection signal="pressed" from="factory" to="." method="_on_factory_pressed"]
+[connection signal="pressed" from="Dam" to="." method="_on_Dam_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://03_peto/000-EX.png" type="Texture2D" id=1]
+[ext_resource path="res://title_screen/fonts/ARCADECLASSIC.TTF" type="FontFile" id=2]
+[ext_resource path="res://title_screen/buttons/petromode/hard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://title_screen/buttons/petromode/Easy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://title_screen/buttons/petromode/nornal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://title_screen/Menupetr.gd" type="Script" id=6]
+[ext_resource path="res://title_screen/back.tscn" type="PackedScene" id=7]
+
+[sub_resource type="FontFile" id=1]
+size = 157
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="000-EX" type="Sprite2D" parent="."]
+position = Vector2( 3203.23, 464.137 )
+texture = ExtResource( 1 )
+
+[node name="Button" parent="." instance=ExtResource( 4 )]
+offset_left = 394.62
+offset_top = 197.89
+offset_right = 686.62
+offset_bottom = 276.89
+
+[node name="Button3" parent="." instance=ExtResource( 5 )]
+offset_left = 389.743
+offset_top = 291.155
+offset_right = 681.743
+offset_bottom = 370.155
+
+[node name="Button2" parent="." instance=ExtResource( 3 )]
+offset_left = 394.375
+offset_top = 388.768
+offset_right = 686.375
+offset_bottom = 467.768
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.8439
+offset_top = 45.8653
+offset_right = 1242.84
+offset_bottom = 205.865
+scale = Vector2( 0.75, 0.75 )
+theme_override_fonts/font = SubResource( 1 )
+theme_override_colors/font_shadow_color = Color( 0, 0, 0, 1 )
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 20
+text = "Escape war zone "
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="back" parent="." instance=ExtResource( 7 )]
+offset_left = 913.836
+offset_top = 547.509
+offset_right = 1112.84
+offset_bottom = 626.509
+scale = Vector2( 0.5, 0.5 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

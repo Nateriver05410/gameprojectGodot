@@ -1,0 +1,480 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://02-ทุ่งนา/BG-sky.png" type="Texture2D" id=1]
+[ext_resource path="res://02-ทุ่งนา/BG-ground.png" type="Texture2D" id=2]
+[ext_resource path="res://02-ทุ่งนา/BG-mound3-2.png" type="Texture2D" id=3]
+[ext_resource path="res://02-ทุ่งนา/BG-mound1-3.png" type="Texture2D" id=4]
+[ext_resource path="res://02-ทุ่งนา/BG-mound1-1.png" type="Texture2D" id=5]
+[ext_resource path="res://02-ทุ่งนา/BG-mound3-1.png" type="Texture2D" id=6]
+[ext_resource path="res://02-ทุ่งนา/BG-mound4-3.png" type="Texture2D" id=7]
+[ext_resource path="res://02-ทุ่งนา/BG-mound4-1.png" type="Texture2D" id=8]
+[ext_resource path="res://02-ทุ่งนา/MG-กองฟาง.png" type="Texture2D" id=9]
+[ext_resource path="res://02-ทุ่งนา/MG-เกวียน.png" type="Texture2D" id=10]
+[ext_resource path="res://02-ทุ่งนา/MG-เสาไฟฟ้าเซต.png" type="Texture2D" id=11]
+[ext_resource path="res://02-ทุ่งนา/MG-เสาไฟฟ้า+สายไฟ1.png" type="Texture2D" id=12]
+[ext_resource path="res://02-ทุ่งนา/MG-เถียงนา.png" type="Texture2D" id=13]
+[ext_resource path="res://02-ทุ่งนา/MG-กระดูกควาย.png" type="Texture2D" id=14]
+[ext_resource path="res://02-ทุ่งนา/MG-หญ้าเดี่ยว.png" type="Texture2D" id=15]
+[ext_resource path="res://02-ทุ่งนา/MG-หญ้ากลุ่ม.png" type="Texture2D" id=16]
+[ext_resource path="res://02-ทุ่งนา/MG-เสาไฟฟ้า+สายไฟ2.png" type="Texture2D" id=17]
+[ext_resource path="res://02-ทุ่งนา/MG-รั้วกลุ่ม.png" type="Texture2D" id=18]
+[ext_resource path="res://02-ทุ่งนา/MG-รั้วเสา.png" type="Texture2D" id=19]
+[ext_resource path="res://02-ทุ่งนา/MG-เสาไฟฟ้า.png" type="Texture2D" id=20]
+[ext_resource path="res://02-ทุ่งนา/BG-mound2-1.png" type="Texture2D" id=21]
+[ext_resource path="res://02-ทุ่งนา/BG-mound5-3.png" type="Texture2D" id=22]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BG-sky" type="Sprite2D" parent="."]
+position = Vector2( 2140.21, 151.386 )
+scale = Vector2( 1.10739, 0.606898 )
+texture = ExtResource( 1 )
+
+[node name="BG-mound1-3" type="Sprite2D" parent="BG-sky"]
+position = Vector2( -932.187, 417.905 )
+texture = ExtResource( 4 )
+
+[node name="BG-sky2" type="Sprite2D" parent="."]
+position = Vector2( 5983.73, 154.384 )
+scale = Vector2( 0.90181, 0.60164 )
+texture = ExtResource( 1 )
+
+[node name="BG-sky4" type="Sprite2D" parent="."]
+position = Vector2( 13269, 158.384 )
+scale = Vector2( 0.90181, 0.60164 )
+texture = ExtResource( 1 )
+
+[node name="BG-sky5" type="Sprite2D" parent="."]
+position = Vector2( 16730.4, 161.689 )
+scale = Vector2( 0.90181, 0.60164 )
+texture = ExtResource( 1 )
+
+[node name="BG-sky3" type="Sprite2D" parent="."]
+position = Vector2( 9629.69, 157.582 )
+scale = Vector2( 1, 0.601788 )
+texture = ExtResource( 1 )
+
+[node name="BG-ground" type="Sprite2D" parent="BG-sky3"]
+position = Vector2( -7724.2, 805.443 )
+scale = Vector2( 1, 1.19955 )
+texture = ExtResource( 2 )
+
+[node name="BG-mound4-3" type="Sprite2D" parent="BG-sky3/BG-ground"]
+position = Vector2( 5522.41, -390.531 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 7 )
+
+[node name="BG-ground2" type="Sprite2D" parent="BG-sky3/BG-ground"]
+position = Vector2( 3808.66, 8.61591 )
+texture = ExtResource( 2 )
+
+[node name="BG-mound1-2" type="Sprite2D" parent="BG-sky3/BG-ground/BG-ground2"]
+position = Vector2( -5213.05, -314.537 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 5 )
+
+[node name="BG-mound3-1" type="Sprite2D" parent="BG-sky3/BG-ground/BG-ground2"]
+position = Vector2( -85.7584, -331.513 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 6 )
+
+[node name="BG-mound1-1" type="Sprite2D" parent="BG-sky3/BG-ground/BG-ground2"]
+position = Vector2( -1347.49, -331.156 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 5 )
+
+[node name="BG-mound3-2" type="Sprite2D" parent="BG-sky3/BG-ground"]
+position = Vector2( 1206.49, -268.914 )
+texture = ExtResource( 3 )
+
+[node name="BG-mound3-1" type="Sprite2D" parent="BG-sky3/BG-ground"]
+position = Vector2( -256.387, -299.538 )
+scale = Vector2( 1, 1.38528 )
+texture = ExtResource( 6 )
+
+[node name="BG-ground" type="Sprite2D" parent="."]
+position = Vector2( 9577.85, 654.275 )
+scale = Vector2( 1.03472, 0.744815 )
+texture = ExtResource( 2 )
+
+[node name="BG-ground2" type="Sprite2D" parent="."]
+position = Vector2( 13480.7, 643.383 )
+scale = Vector2( 1.03472, 0.744815 )
+texture = ExtResource( 2 )
+
+[node name="BG-ground3" type="Sprite2D" parent="."]
+position = Vector2( 16979.1, 641.947 )
+scale = Vector2( 1.03472, 0.744815 )
+texture = ExtResource( 2 )
+
+[node name="BG-mound4-1" type="Sprite2D" parent="."]
+position = Vector2( 9862.41, 335.672 )
+texture = ExtResource( 8 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="."]
+position = Vector2( 935.922, 496.658 )
+scale = Vector2( 0.387388, 0.370343 )
+texture = ExtResource( 9 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="MG-กองฟาง"]
+position = Vector2( -214.197, 63.1187 )
+texture = ExtResource( 10 )
+
+[node name="MG-เสาไฟฟ้า+สายไฟ1" type="Sprite2D" parent="MG-กองฟาง"]
+position = Vector2( -792.769, -139.042 )
+texture = ExtResource( 12 )
+
+[node name="MG-เสาไฟฟ้าเซต" type="Sprite2D" parent="MG-กองฟาง/MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( 1984.13, 13.4305 )
+texture = ExtResource( 11 )
+
+[node name="MG-เสาไฟฟ้าเซต2" type="Sprite2D" parent="MG-กองฟาง/MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( -830.308, -72.1178 )
+scale = Vector2( 1.08511, 1.35138 )
+texture = ExtResource( 11 )
+
+[node name="MG-เถียงนา" type="Sprite2D" parent="MG-กองฟาง/MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( -554.486, 75.7039 )
+scale = Vector2( 1.08511, 1.35138 )
+texture = ExtResource( 13 )
+
+[node name="MG-กระดูกควาย" type="Sprite2D" parent="."]
+position = Vector2( 652.941, 530.193 )
+scale = Vector2( 0.423058, 0.389326 )
+texture = ExtResource( 14 )
+
+[node name="MG-กระดูกควาย2" type="Sprite2D" parent="."]
+position = Vector2( 1645.61, 521.422 )
+scale = Vector2( 0.77773, 0.544947 )
+texture = ExtResource( 14 )
+
+[node name="MG-รั้วกลุ่ม" type="Sprite2D" parent="."]
+position = Vector2( 1897.04, 496.728 )
+texture = ExtResource( 18 )
+
+[node name="MG-รั้วเสา" type="Sprite2D" parent="."]
+position = Vector2( 2111.03, 489.867 )
+texture = ExtResource( 19 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-รั้วเสา"]
+position = Vector2( 305.449, 33.5507 )
+texture = ExtResource( 16 )
+
+[node name="MG-เถียงนา" type="Sprite2D" parent="."]
+position = Vector2( 2817.53, 484.661 )
+scale = Vector2( 0.388126, 0.502363 )
+texture = ExtResource( 13 )
+
+[node name="MG-เสาไฟฟ้าเซต" type="Sprite2D" parent="."]
+position = Vector2( 3153.93, 425.949 )
+scale = Vector2( 0.585932, 0.453547 )
+texture = ExtResource( 11 )
+
+[node name="MG-กองฟาง2" type="Sprite2D" parent="."]
+position = Vector2( 2974.56, 496.301 )
+scale = Vector2( 0.359254, 0.317276 )
+texture = ExtResource( 9 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="."]
+position = Vector2( 3085.69, 511.335 )
+scale = Vector2( 0.408378, 0.392767 )
+texture = ExtResource( 10 )
+
+[node name="MG-หญ้าเดี่ยว" type="Sprite2D" parent="."]
+position = Vector2( 3643.05, 517.041 )
+texture = ExtResource( 15 )
+
+[node name="MG-รั้วกลุ่ม" type="Sprite2D" parent="MG-หญ้าเดี่ยว"]
+position = Vector2( 245.062, -27.8043 )
+texture = ExtResource( 18 )
+
+[node name="MG-รั้วเสา" type="Sprite2D" parent="MG-หญ้าเดี่ยว/MG-รั้วกลุ่ม"]
+position = Vector2( 218.25, 23.3082 )
+texture = ExtResource( 19 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-หญ้าเดี่ยว/MG-รั้วกลุ่ม"]
+position = Vector2( 542.445, 19.0703 )
+texture = ExtResource( 16 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="MG-หญ้าเดี่ยว/MG-รั้วกลุ่ม"]
+position = Vector2( 525.137, 4.69183 )
+scale = Vector2( 0.696752, 0.606557 )
+texture = ExtResource( 10 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-หญ้าเดี่ยว/MG-รั้วกลุ่ม/MG-เกวียน"]
+position = Vector2( 573.211, -34.2094 )
+texture = ExtResource( 9 )
+
+[node name="MG-เสาไฟฟ้า+สายไฟ2" type="Sprite2D" parent="."]
+position = Vector2( 4667.32, 421.178 )
+scale = Vector2( 0.786097, 0.472693 )
+texture = ExtResource( 17 )
+
+[node name="MG-เสาไฟฟ้า" type="Sprite2D" parent="MG-เสาไฟฟ้า+สายไฟ2"]
+position = Vector2( 447.782, 16.9243 )
+texture = ExtResource( 20 )
+
+[node name="MG-กระดูกควาย3" type="Sprite2D" parent="."]
+position = Vector2( 5252.69, 553.178 )
+scale = Vector2( 0.683168, 0.72973 )
+texture = ExtResource( 14 )
+
+[node name="MG-รั้วกลุ่ม" type="Sprite2D" parent="MG-กระดูกควาย3"]
+position = Vector2( 525.027, -82.2222 )
+texture = ExtResource( 18 )
+
+[node name="MG-หญ้าเดี่ยว" type="Sprite2D" parent="MG-กระดูกควาย3"]
+position = Vector2( 841.201, -65.7778 )
+texture = ExtResource( 15 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-กระดูกควาย3"]
+position = Vector2( 753.06, -71.2593 )
+texture = ExtResource( 16 )
+
+[node name="MG-รั้วเสา2" type="Sprite2D" parent="."]
+position = Vector2( 6072.96, 486.917 )
+texture = ExtResource( 19 )
+
+[node name="MG-หญ้าเดี่ยว2" type="Sprite2D" parent="."]
+position = Vector2( 6182.37, 503.566 )
+texture = ExtResource( 15 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="."]
+position = Vector2( 6776.97, 501.188 )
+texture = ExtResource( 16 )
+
+[node name="MG-รั้วกลุ่ม2" type="Sprite2D" parent="."]
+position = Vector2( 6515.34, 489.295 )
+texture = ExtResource( 18 )
+
+[node name="MG-เสาไฟฟ้า" type="Sprite2D" parent="."]
+position = Vector2( 6708.07, 412.778 )
+scale = Vector2( 0.656772, 0.452517 )
+texture = ExtResource( 20 )
+
+[node name="MG-เถียงนา2" type="Sprite2D" parent="."]
+position = Vector2( 7138.74, 461.286 )
+scale = Vector2( 0.483023, 0.535323 )
+texture = ExtResource( 13 )
+
+[node name="MG-เสาไฟฟ้าเซต2" type="Sprite2D" parent="."]
+position = Vector2( 7639.94, 421.644 )
+scale = Vector2( 0.645083, 0.509399 )
+texture = ExtResource( 11 )
+
+[node name="MG-หญ้ากลุ่ม2" type="Sprite2D" parent="."]
+position = Vector2( 7528.56, 491.49 )
+texture = ExtResource( 16 )
+
+[node name="MG-กองฟาง3" type="Sprite2D" parent="."]
+position = Vector2( 8000.5, 459.399 )
+scale = Vector2( 0.560136, 0.544337 )
+texture = ExtResource( 9 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-กองฟาง3"]
+position = Vector2( 229.172, 38.1478 )
+texture = ExtResource( 9 )
+
+[node name="MG-เสาไฟฟ้าเซต3" type="Sprite2D" parent="."]
+position = Vector2( 8714.2, 374.224 )
+scale = Vector2( 0.754768, 0.630885 )
+texture = ExtResource( 11 )
+
+[node name="MG-หญ้าเดี่ยว" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต3"]
+position = Vector2( 578.23, 195.158 )
+texture = ExtResource( 15 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต3"]
+position = Vector2( 1058.44, 177.205 )
+texture = ExtResource( 16 )
+
+[node name="MG-หญ้ากลุ่ม2" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต3"]
+position = Vector2( 1658.7, 207.127 )
+texture = ExtResource( 16 )
+
+[node name="MG-เสาไฟฟ้าเซต" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต3"]
+position = Vector2( 1328.56, -2.32831 )
+texture = ExtResource( 11 )
+
+[node name="MG-เกวียน2" type="Sprite2D" parent="."]
+position = Vector2( 10344.4, 489.796 )
+scale = Vector2( 0.604732, 0.566746 )
+texture = ExtResource( 10 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-เกวียน2"]
+position = Vector2( 334.012, -46.632 )
+texture = ExtResource( 9 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-เกวียน2/MG-กองฟาง"]
+position = Vector2( 268.461, -6.66187 )
+texture = ExtResource( 9 )
+
+[node name="MG-เถียงนา" type="Sprite2D" parent="MG-เกวียน2/MG-กองฟาง/MG-กองฟาง"]
+position = Vector2( 387.081, -73.2787 )
+scale = Vector2( 0.922284, 1.28697 )
+texture = ExtResource( 13 )
+
+[node name="MG-กระดูกควาย" type="Sprite2D" parent="MG-เกวียน2/MG-กองฟาง/MG-กองฟาง/MG-เถียงนา"]
+position = Vector2( 609.242, 108.702 )
+texture = ExtResource( 14 )
+
+[node name="BG-mound5-3" type="Sprite2D" parent="."]
+position = Vector2( 13531.7, 307.355 )
+texture = ExtResource( 22 )
+
+[node name="BG-mound2-1" type="Sprite2D" parent="."]
+position = Vector2( 12247.9, 417.655 )
+texture = ExtResource( 21 )
+
+[node name="BG-mound4-2" type="Sprite2D" parent="."]
+position = Vector2( 15772.1, 403.459 )
+scale = Vector2( 0.90181, 0.60164 )
+texture = ExtResource( 8 )
+
+[node name="BG-mound3-1" type="Sprite2D" parent="."]
+position = Vector2( 17705.8, 385.908 )
+texture = ExtResource( 6 )
+
+[node name="MG-รั้วกลุ่ม3" type="Sprite2D" parent="."]
+position = Vector2( 11598.5, 477.804 )
+texture = ExtResource( 18 )
+
+[node name="MG-หญ้ากลุ่ม3" type="Sprite2D" parent="."]
+position = Vector2( 11992.5, 502.877 )
+texture = ExtResource( 16 )
+
+[node name="MG-รั้วเสา3" type="Sprite2D" parent="."]
+position = Vector2( 12355.8, 489.422 )
+texture = ExtResource( 19 )
+
+[node name="MG-หญ้าเดี่ยว3" type="Sprite2D" parent="."]
+position = Vector2( 12487, 506.24 )
+texture = ExtResource( 15 )
+
+[node name="MG-รั้วเสา4" type="Sprite2D" parent="."]
+position = Vector2( 12658.5, 482.695 )
+texture = ExtResource( 19 )
+
+[node name="MG-กระดูกควาย4" type="Sprite2D" parent="."]
+position = Vector2( 12007.6, 494.468 )
+scale = Vector2( 0.800187, 0.70455 )
+texture = ExtResource( 14 )
+
+[node name="MG-กองฟาง4" type="Sprite2D" parent="."]
+position = Vector2( 12888.7, 462.514 )
+scale = Vector2( 0.804065, 0.628846 )
+texture = ExtResource( 9 )
+
+[node name="MG-เถียงนา" type="Sprite2D" parent="MG-กองฟาง4"]
+position = Vector2( 522.544, 20.9748 )
+scale = Vector2( 0.482505, 0.67014 )
+texture = ExtResource( 13 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="MG-กองฟาง4"]
+position = Vector2( 266.797, 72.2467 )
+scale = Vector2( 0.692242, 0.866281 )
+texture = ExtResource( 10 )
+
+[node name="MG-เสาไฟฟ้า+สายไฟ1" type="Sprite2D" parent="."]
+position = Vector2( 13532.8, 376.742 )
+scale = Vector2( 0.982015, 0.60093 )
+texture = ExtResource( 12 )
+
+[node name="MG-รั้วกลุ่ม" type="Sprite2D" parent="MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( 269.695, 170.718 )
+texture = ExtResource( 18 )
+
+[node name="MG-กระดูกควาย" type="Sprite2D" parent="MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( 651.972, 221.093 )
+texture = ExtResource( 14 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( 1069.84, 204.301 )
+texture = ExtResource( 16 )
+
+[node name="MG-หญ้าเดี่ยว" type="Sprite2D" parent="MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( 1550.23, 199.984 )
+texture = ExtResource( 15 )
+
+[node name="MG-รั้วกลุ่ม2" type="Sprite2D" parent="MG-เสาไฟฟ้า+สายไฟ1"]
+position = Vector2( 1403.33, 185.864 )
+texture = ExtResource( 18 )
+
+[node name="MG-เถียงนา3" type="Sprite2D" parent="."]
+position = Vector2( 15394, 463.694 )
+scale = Vector2( 0.465336, 0.529762 )
+texture = ExtResource( 13 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="MG-เถียงนา3"]
+position = Vector2( 531.271, 53.7372 )
+scale = Vector2( 1.20923, 1 )
+texture = ExtResource( 10 )
+
+[node name="MG-รั้วกลุ่ม" type="Sprite2D" parent="MG-เถียงนา3"]
+position = Vector2( 1107.62, 36.7675 )
+scale = Vector2( 2.2236, 1.40594 )
+texture = ExtResource( 18 )
+
+[node name="MG-หญ้ากลุ่ม4" type="Sprite2D" parent="."]
+position = Vector2( 16294, 497.427 )
+texture = ExtResource( 16 )
+
+[node name="MG-กองฟาง5" type="Sprite2D" parent="."]
+position = Vector2( 16295.8, 452.882 )
+scale = Vector2( 0.665551, 0.569911 )
+texture = ExtResource( 9 )
+
+[node name="MG-เสาไฟฟ้าเซต4" type="Sprite2D" parent="."]
+position = Vector2( 16833.9, 417.246 )
+scale = Vector2( 0.767696, 0.496504 )
+texture = ExtResource( 11 )
+
+[node name="MG-หญ้ากลุ่ม" type="Sprite2D" parent="MG-เสาไฟฟ้าเซต4"]
+position = Vector2( 208.659, 185.372 )
+scale = Vector2( 1.204, 1.6851 )
+texture = ExtResource( 16 )
+
+[node name="MG-เถียงนา4" type="Sprite2D" parent="."]
+position = Vector2( 18164.1, 443.405 )
+scale = Vector2( 0.545514, 0.599487 )
+texture = ExtResource( 13 )
+
+[node name="MG-กระดูกควาย" type="Sprite2D" parent="MG-เถียงนา4"]
+position = Vector2( -1358.93, 103.269 )
+texture = ExtResource( 14 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-เถียงนา4/MG-กระดูกควาย"]
+position = Vector2( 308.455, -84.734 )
+texture = ExtResource( 9 )
+
+[node name="MG-กองฟาง" type="Sprite2D" parent="MG-เถียงนา4/MG-กระดูกควาย/MG-กองฟาง"]
+position = Vector2( 593.625, -10.5914 )
+texture = ExtResource( 9 )
+
+[node name="MG-เกวียน" type="Sprite2D" parent="MG-เถียงนา4/MG-กระดูกควาย/MG-กองฟาง/MG-กองฟาง"]
+position = Vector2( -320.094, 74.1421 )
+texture = ExtResource( 10 )
+
+[node name="MG-หญ้าเดี่ยว" type="Sprite2D" parent="MG-เถียงนา4"]
+position = Vector2( 335.691, 99.1835 )
+texture = ExtResource( 15 )
+
+[node name="MG-เสาไฟฟ้า2" type="Sprite2D" parent="."]
+position = Vector2( 18449.7, 401.341 )
+scale = Vector2( 0.779296, 0.485814 )
+texture = ExtResource( 20 )
+
+[node name="MG-เสาไฟฟ้า+สายไฟ3" type="Sprite2D" parent="."]
+position = Vector2( 14599.2, 392.858 )
+scale = Vector2( 0.752064, 0.495959 )
+texture = ExtResource( 12 )
+
+[node name="MG-กองฟาง6" type="Sprite2D" parent="."]
+position = Vector2( 13984.1, 451.43 )
+scale = Vector2( 0.485696, 0.444695 )
+texture = ExtResource( 9 )
+
+[node name="MG-กระดูกควาย5" type="Sprite2D" parent="."]
+position = Vector2( 9738.03, 503.887 )
+scale = Vector2( 0.622802, 0.613875 )
+texture = ExtResource( 14 )

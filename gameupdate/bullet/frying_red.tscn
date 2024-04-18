@@ -1,0 +1,100 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://gigi v2/red/05-destroyed/R-destroyed-2.png" type="Texture2D" id=1]
+[ext_resource path="res://gigi v2/red/05-destroyed/R-destroyed-1.png" type="Texture2D" id=2]
+[ext_resource path="res://gigi v2/red/05-destroyed/R-destroyed-3.png" type="Texture2D" id=3]
+[ext_resource path="res://gigi v2/red/01-moving/R-angry-2.png" type="Texture2D" id=4]
+[ext_resource path="res://gigi v2/red/05-destroyed/R-destroyed-4.png" type="Texture2D" id=5]
+[ext_resource path="res://gigi v2/red/01-moving/R-angry-1.png" type="Texture2D" id=6]
+[ext_resource path="res://gigi v2/red/01-moving/R-normal-1.png" type="Texture2D" id=7]
+[ext_resource path="res://gigi v2/red/01-moving/R-normal-2.png" type="Texture2D" id=8]
+[ext_resource path="res://bullet/frying_red.gd" type="Script" id=9]
+[ext_resource path="res://soundsandmusic/sounds/Retro Beat.ogg" type="AudioStream" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "moving",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "destroyed",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 17.2727
+
+[sub_resource type="Animation" id=4]
+resource_name = "fly"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("AnimatedSprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PackedFloat32Array( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PackedFloat32Array( 0, 0.5, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("AnimatedSprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PackedFloat32Array( 0, -0.25, 0, 0.25, 0, 800, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PackedFloat32Array( 0, 0.5, 1 )
+}
+
+[node name="frying_red" type="Node2D"]
+scale = Vector2( 0.15, 0.15 )
+script = ExtResource( 9 )
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2( 0, 799.992 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="collision" type="Area2D" parent="AnimatedSprite2D"]
+collision_mask = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/collision"]
+position = Vector2( -21.1654, 23.811 )
+scale = Vector2( 28.326, 41.1672 )
+shape = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="vision" type="Area2D" parent="AnimatedSprite2D"]
+scale = Vector2( 0.8, 0.8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/vision"]
+scale = Vector2( -145.357, 142.204 )
+shape = SubResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fly = SubResource( 4 )
+
+[node name="soundangre" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+bus = "Music"
+
+[connection signal="area_entered" from="AnimatedSprite2D/collision" to="." method="_on_collision_area_entered"]
+[connection signal="body_entered" from="AnimatedSprite2D/collision" to="." method="_on_collision_body_entered"]
+[connection signal="body_entered" from="AnimatedSprite2D/vision" to="." method="_on_vision_body_entered"]

@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogic/Editor/Events/Parts/CallNode/EventPart_CallNodePicker.gd" type="Script" id=1]
+
+[node name="CallNodePicker" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+offset_right = 820.0
+offset_bottom = 14.0
+text = "This event calls the method [Method Name] on the node [Target Node]. It passes an array to the method."
+
+[node name="Properties" type="HBoxContainer" parent="."]
+offset_top = 18.0
+offset_right = 820.0
+offset_bottom = 42.0
+theme_override_constants/separation = 8
+
+[node name="TargetNodeLabel" type="Label" parent="Properties"]
+offset_top = 5.0
+offset_right = 81.0
+offset_bottom = 19.0
+text = "Target Node:"
+
+[node name="TargetNodeEdit" type="LineEdit" parent="Properties"]
+offset_left = 89.0
+offset_right = 339.0
+offset_bottom = 24.0
+custom_minimum_size = Vector2( 250, 0 )
+
+[node name="CallMethodLabel" type="Label" parent="Properties"]
+offset_left = 347.0
+offset_top = 5.0
+offset_right = 442.0
+offset_bottom = 19.0
+text = "Method Name:"
+
+[node name="CallMethodEdit" type="LineEdit" parent="Properties"]
+offset_left = 450.0
+offset_right = 650.0
+offset_bottom = 24.0
+custom_minimum_size = Vector2( 200, 0 )
+
+[node name="ArgumentsLabel" type="Label" parent="Properties"]
+offset_left = 658.0
+offset_top = 5.0
+offset_right = 738.0
+offset_bottom = 19.0
+text = "ArrayLength:"
+
+[node name="ArgumentsSpinBox" type="SpinBox" parent="Properties"]
+offset_left = 746.0
+offset_right = 820.0
+offset_bottom = 24.0
+max_value = 99.0
+
+[node name="Arguments" type="VBoxContainer" parent="."]
+offset_top = 46.0
+offset_right = 820.0
+offset_bottom = 46.0
+theme_override_constants/separation = 5

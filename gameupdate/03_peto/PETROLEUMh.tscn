@@ -1,0 +1,594 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://03_peto/BG-Petroleum Rig.png" type="Texture2D" id=1]
+[ext_resource path="res://03_peto/BG-sky.png" type="Texture2D" id=2]
+[ext_resource path="res://03_peto/BG-Ocean.png" type="Texture2D" id=3]
+[ext_resource path="res://03_peto/BG-Ship1.png" type="Texture2D" id=4]
+[ext_resource path="res://03_peto/BG-Island2.png" type="Texture2D" id=5]
+[ext_resource path="res://03_peto/BG-Ship2.png" type="Texture2D" id=6]
+[ext_resource path="res://03_peto/BG-Island1.png" type="Texture2D" id=7]
+[ext_resource path="res://03_peto/BG-Island3.png" type="Texture2D" id=8]
+[ext_resource path="res://bullet/frying_red.tscn" type="PackedScene" id=9]
+[ext_resource path="res://bullet/enemy2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://bullet/finish line.tscn" type="PackedScene" id=11]
+[ext_resource path="res://03_peto/FG-street2-above.png" type="Texture2D" id=12]
+[ext_resource path="res://03_peto/FG-street3-above.png" type="Texture2D" id=13]
+[ext_resource path="res://03_peto/FG-street1-above.png" type="Texture2D" id=14]
+[ext_resource path="res://03_peto/FG-Helicopter Parking.png" type="Texture2D" id=15]
+[ext_resource path="res://Item/TAg.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Dam_hard.gd" type="Script" id=17]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1800.73, 85.9365 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64.8976, 679.74 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3974.91, 10 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 17 )
+
+[node name="BG-sky" type="Sprite2D" parent="."]
+position = Vector2( 7444.33, 32.1511 )
+scale = Vector2( 1.94373, 1.79057 )
+texture = ExtResource( 2 )
+
+[node name="BG-Island2" type="Sprite2D" parent="."]
+position = Vector2( 2973.69, 490.742 )
+scale = Vector2( 1, 0.488087 )
+texture = ExtResource( 5 )
+
+[node name="BG-Island1" type="Sprite2D" parent="."]
+position = Vector2( 6179.1, 478.81 )
+scale = Vector2( 1, 0.488087 )
+texture = ExtResource( 7 )
+
+[node name="BG-Island4" type="Sprite2D" parent="."]
+position = Vector2( 9395.71, 420.298 )
+scale = Vector2( 1.38174, 1.39451 )
+texture = ExtResource( 7 )
+
+[node name="BG-Island3" type="Sprite2D" parent="."]
+position = Vector2( 11851.1, 463.439 )
+texture = ExtResource( 8 )
+
+[node name="BG-Ocean" type="Sprite2D" parent="."]
+position = Vector2( 7484.94, 630.997 )
+scale = Vector2( 1.9484, 0.488087 )
+texture = ExtResource( 3 )
+
+[node name="BG-Ship1" type="Sprite2D" parent="."]
+position = Vector2( 275.534, 488.9 )
+scale = Vector2( 0.485457, 0.59052 )
+texture = ExtResource( 4 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="BG-Ship1"]
+position = Vector2( 1395.77, -190.782 )
+scale = Vector2( 0.790564, 0.792945 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="BG-Ship1/BG-Petroleum Rig"]
+position = Vector2( 2310.66, 223.09 )
+texture = ExtResource( 6 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="BG-Ship1/BG-Petroleum Rig"]
+position = Vector2( 10971.1, 45.3394 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship1" type="Sprite2D" parent="BG-Ship1/BG-Petroleum Rig/BG-Petroleum Rig"]
+position = Vector2( -3808.98, 213.093 )
+texture = ExtResource( 4 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="."]
+position = Vector2( 5904.85, 478.294 )
+scale = Vector2( 0.401459, 0.621673 )
+texture = ExtResource( 6 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="."]
+position = Vector2( 8485.26, 376.382 )
+scale = Vector2( 0.454546, 0.500664 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="BG-Petroleum Rig"]
+position = Vector2( -2190.15, 202.443 )
+texture = ExtResource( 6 )
+
+[node name="BG-Ship3" type="Sprite2D" parent="."]
+position = Vector2( 10857.3, 503.577 )
+scale = Vector2( 0.730491, 0.834545 )
+texture = ExtResource( 4 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="BG-Ship3"]
+position = Vector2( 2913.23, -209.662 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship4" type="Sprite2D" parent="."]
+position = Vector2( 13914.3, 504.314 )
+scale = Vector2( 0.615398, 0.606479 )
+texture = ExtResource( 4 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="BG-Ship4"]
+position = Vector2( -15660.8, -26.084 )
+texture = ExtResource( 6 )
+
+[node name="BG-sky2" type="Sprite2D" parent="BG-Ship4"]
+position = Vector2( 9909.97, -1175.72 )
+scale = Vector2( 2.16375, 2.20513 )
+texture = ExtResource( 2 )
+
+[node name="BG-Island2" type="Sprite2D" parent="BG-Ship4/BG-sky2"]
+position = Vector2( -1692.61, 522.255 )
+scale = Vector2( 0.724916, 1 )
+texture = ExtResource( 5 )
+
+[node name="BG-Island1" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2"]
+position = Vector2( 3205.41, -24.4465 )
+texture = ExtResource( 7 )
+
+[node name="BG-Ocean" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1"]
+position = Vector2( -864.906, 323.108 )
+scale = Vector2( 1.38174, 1 )
+texture = ExtResource( 3 )
+
+[node name="BG-Island4" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1"]
+position = Vector2( 3216.61, -119.88 )
+scale = Vector2( 1.38174, 2.85709 )
+texture = ExtResource( 7 )
+
+[node name="BG-Ship1" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1/BG-Island4"]
+position = Vector2( -6600.5, 49.1943 )
+scale = Vector2( 0.351337, 0.423461 )
+texture = ExtResource( 4 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1/BG-Island4/BG-Ship1"]
+position = Vector2( 1395.77, -190.782 )
+scale = Vector2( 0.790564, 0.792945 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1/BG-Island4/BG-Ship1/BG-Petroleum Rig"]
+position = Vector2( 2310.66, 223.09 )
+texture = ExtResource( 6 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1/BG-Island4/BG-Ship1/BG-Petroleum Rig"]
+position = Vector2( 10971.1, 45.3394 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship1" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1/BG-Island4/BG-Ship1/BG-Petroleum Rig/BG-Petroleum Rig"]
+position = Vector2( -3808.98, 213.093 )
+texture = ExtResource( 4 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1/BG-Island4/BG-Ship1/BG-Petroleum Rig/BG-Petroleum Rig/BG-Ship1"]
+position = Vector2( 5740.24, -40.4834 )
+scale = Vector2( 1.04605, 1.32765 )
+texture = ExtResource( 6 )
+
+[node name="BG-Petroleum Rig" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1/BG-Island4/BG-Ship1/BG-Petroleum Rig/BG-Petroleum Rig/BG-Ship1/BG-Ship2"]
+position = Vector2( 6427.58, -163.932 )
+scale = Vector2( 1.13224, 0.805349 )
+texture = ExtResource( 1 )
+
+[node name="BG-Ship2" type="Sprite2D" parent="BG-Ship4/BG-sky2/BG-Island2/BG-Island1/BG-Island4/BG-Ship1/BG-Petroleum Rig/BG-Petroleum Rig/BG-Ship1/BG-Ship2/BG-Petroleum Rig"]
+position = Vector2( -2190.15, 202.443 )
+texture = ExtResource( 6 )
+
+[node name="FG-street1-above2" type="Sprite2D" parent="."]
+position = Vector2( 134.78, 676.484 )
+texture = ExtResource( 14 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above2"]
+position = Vector2( 403.331, -36.5102 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above2/FG-street2-above"]
+position = Vector2( 407.962, 38.0976 )
+texture = ExtResource( 13 )
+
+[node name="FG-Helicopter Parking" type="Sprite2D" parent="FG-street1-above2/FG-street2-above/FG-street3-above"]
+position = Vector2( 947.678, 39.685 )
+texture = ExtResource( 15 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above2/FG-street2-above/FG-street3-above/FG-Helicopter Parking"]
+position = Vector2( 1079.73, -74.3062 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above2/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above"]
+position = Vector2( 405.338, 34.9229 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1-above2/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above"]
+position = Vector2( -14065.1, -1546.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1-above2/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above/StaticBody2D"]
+position = Vector2( 12450.7, 1504.78 )
+shape = SubResource( 1 )
+
+[node name="FG-street1-above3" type="Sprite2D" parent="."]
+position = Vector2( 3854.62, 676.484 )
+texture = ExtResource( 14 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above3"]
+position = Vector2( 403.331, -36.5102 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above3/FG-street2-above"]
+position = Vector2( 407.962, 38.0976 )
+texture = ExtResource( 13 )
+
+[node name="FG-Helicopter Parking" type="Sprite2D" parent="FG-street1-above3/FG-street2-above/FG-street3-above"]
+position = Vector2( 947.678, 39.685 )
+texture = ExtResource( 15 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above3/FG-street2-above/FG-street3-above/FG-Helicopter Parking"]
+position = Vector2( 1079.73, -74.3062 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above3/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above"]
+position = Vector2( 405.338, 34.9229 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1-above3/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above"]
+position = Vector2( -14065.1, -1546.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1-above3/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above/StaticBody2D"]
+position = Vector2( 12450.7, 1504.78 )
+shape = SubResource( 1 )
+
+[node name="FG-street1-above4" type="Sprite2D" parent="."]
+position = Vector2( 7388.94, 690.754 )
+texture = ExtResource( 14 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above4"]
+position = Vector2( 403.331, -36.5102 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above4/FG-street2-above"]
+position = Vector2( 407.962, 38.0976 )
+texture = ExtResource( 13 )
+
+[node name="FG-Helicopter Parking" type="Sprite2D" parent="FG-street1-above4/FG-street2-above/FG-street3-above"]
+position = Vector2( 947.678, 39.685 )
+texture = ExtResource( 15 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above4/FG-street2-above/FG-street3-above/FG-Helicopter Parking"]
+position = Vector2( 1079.73, -74.3062 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above4/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above"]
+position = Vector2( 405.338, 34.9229 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1-above4/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above"]
+position = Vector2( -14065.1, -1546.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1-above4/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above/StaticBody2D"]
+position = Vector2( 12450.7, 1504.78 )
+shape = SubResource( 1 )
+
+[node name="FG-street1-above5" type="Sprite2D" parent="."]
+position = Vector2( 11142.1, 562.32 )
+texture = ExtResource( 14 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above5"]
+position = Vector2( 403.331, -36.5102 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above5/FG-street2-above"]
+position = Vector2( 407.962, 38.0976 )
+texture = ExtResource( 13 )
+
+[node name="FG-Helicopter Parking" type="Sprite2D" parent="FG-street1-above5/FG-street2-above/FG-street3-above"]
+position = Vector2( 947.678, 39.685 )
+texture = ExtResource( 15 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above5/FG-street2-above/FG-street3-above/FG-Helicopter Parking"]
+position = Vector2( 1079.73, -74.3062 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above5/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above"]
+position = Vector2( 405.338, 34.9229 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1-above5/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above"]
+position = Vector2( -14065.1, -1546.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1-above5/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above/StaticBody2D"]
+position = Vector2( 12450.7, 1504.78 )
+shape = SubResource( 1 )
+
+[node name="FG-street1-above6" type="Sprite2D" parent="."]
+position = Vector2( 14952.3, 643.186 )
+texture = ExtResource( 14 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above6"]
+position = Vector2( 403.331, -36.5102 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above6/FG-street2-above"]
+position = Vector2( 407.962, 38.0976 )
+texture = ExtResource( 13 )
+
+[node name="FG-Helicopter Parking" type="Sprite2D" parent="FG-street1-above6/FG-street2-above/FG-street3-above"]
+position = Vector2( 947.678, 39.685 )
+texture = ExtResource( 15 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above6/FG-street2-above/FG-street3-above/FG-Helicopter Parking"]
+position = Vector2( 1079.73, -74.3062 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above6/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above"]
+position = Vector2( 405.338, 34.9229 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1-above6/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above"]
+position = Vector2( -14065.1, -1546.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1-above6/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above/StaticBody2D"]
+position = Vector2( 12450.7, 1504.78 )
+shape = SubResource( 1 )
+
+[node name="FG-street1-above7" type="Sprite2D" parent="."]
+position = Vector2( 18664.4, 679.598 )
+texture = ExtResource( 14 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above7"]
+position = Vector2( 403.331, -36.5102 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above7/FG-street2-above"]
+position = Vector2( 407.962, 38.0976 )
+texture = ExtResource( 13 )
+
+[node name="FG-Helicopter Parking" type="Sprite2D" parent="FG-street1-above7/FG-street2-above/FG-street3-above"]
+position = Vector2( 947.678, 39.685 )
+texture = ExtResource( 15 )
+
+[node name="FG-street2-above" type="Sprite2D" parent="FG-street1-above7/FG-street2-above/FG-street3-above/FG-Helicopter Parking"]
+position = Vector2( 1079.73, -74.3062 )
+texture = ExtResource( 12 )
+
+[node name="FG-street3-above" type="Sprite2D" parent="FG-street1-above7/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above"]
+position = Vector2( 405.338, 34.9229 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="FG-street1-above7/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above"]
+position = Vector2( -14065.1, -1546.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FG-street1-above7/FG-street2-above/FG-street3-above/FG-Helicopter Parking/FG-street2-above/FG-street3-above/StaticBody2D"]
+position = Vector2( 12442.2, 1530.21 )
+shape = SubResource( 1 )
+
+[node name="Score" type="CanvasLayer" parent="."]
+scale = Vector2( 2, 2 )
+transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Score"]
+offset_left = 2.64062
+offset_top = 0.112225
+offset_right = 97.6406
+offset_bottom = 14.1122
+text = "enemies killed"
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="CanvasLayer2"]
+offset_left = 12.4633
+offset_top = 582.564
+offset_right = 91.4633
+offset_bottom = 596.564
+text = "version: 4.00"
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer3"]
+offset_left = 888.354
+offset_top = 9.77606
+offset_right = 1009.35
+offset_bottom = 23.7761
+text = "Level:petro_hard"
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="finish_line" parent="." instance=ExtResource( 11 )]
+position = Vector2( 21046.7, 195.513 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="enemy" parent="." instance=ExtResource( 10 )]
+position = Vector2( 19672.3, 441.357 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="enemy2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 7202.54, 447.574 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Backwall" type="StaticBody2D" parent="."]
+position = Vector2( -312.055, 276.128 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( 291.723, 9.25159 )
+scale = Vector2( 0.4, 0.4 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( 22172, 115.615 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( 5407.58, -569.484 )
+scale = Vector2( 4.33054, 1 )
+shape = SubResource( 3 )
+
+[node name="frying_red" parent="." instance=ExtResource( 9 )]
+position = Vector2( 11269.8, 8.43884 )
+
+[node name="frying_red2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2004.27, 164.263 )
+
+[node name="frying_red3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 5780, 140.29 )
+
+[node name="frying_red4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 15369.2, 116.317 )
+
+[node name="frying_red5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 17910.3, 164.263 )
+
+[node name="Node2D" parent="." instance=ExtResource( 16 )]
+position = Vector2( 721.598, 566.323 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 2859.89, 569.151 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 5054.75, 586.122 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D3" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D3/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D4" parent="." instance=ExtResource( 16 )]
+position = Vector2( 721.598, 566.323 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D4" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D4/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D4/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D5" parent="." instance=ExtResource( 16 )]
+position = Vector2( 2859.89, 569.151 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D5" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D5/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D5/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D6" parent="." instance=ExtResource( 16 )]
+position = Vector2( 5054.75, 586.122 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D6" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D6/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D6/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D7" parent="." instance=ExtResource( 16 )]
+position = Vector2( 7758.73, 535.21 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D7" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D7/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D7/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D8" parent="." instance=ExtResource( 16 )]
+position = Vector2( 10355.2, 543.695 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D8" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D8/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D8/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D9" parent="." instance=ExtResource( 16 )]
+position = Vector2( 12674.5, 521.068 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D9" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D9/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 37.7975 )
+
+[node name="Node2D2" parent="Node2D9/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D10" parent="." instance=ExtResource( 16 )]
+position = Vector2( 15749, 532.382 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D10" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D10/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 40.9723 )
+
+[node name="Node2D2" parent="Node2D10/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )
+
+[node name="Node2D11" parent="." instance=ExtResource( 16 )]
+position = Vector2( 18864.8, 559.724 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Node2D2" parent="Node2D11" instance=ExtResource( 16 )]
+position = Vector2( 846.667, 2.5199 )
+
+[node name="Node2D2" parent="Node2D11/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 1647.98, 40.9723 )
+
+[node name="Node2D2" parent="Node2D11/Node2D2/Node2D2" instance=ExtResource( 16 )]
+position = Vector2( 997.858, -5.03967 )

@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://bullet/Dam_easy_ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://bullet/flying_blue.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Item/Bomb.tscn" type="PackedScene" id=3]
+[ext_resource path="res://bullet/finish line.tscn" type="PackedScene" id=4]
+[ext_resource path="res://01_DAM/asset/sky.png" type="Texture2D" id=5]
+[ext_resource path="res://humvee.tscn" type="PackedScene" id=6]
+[ext_resource path="res://01_DAM/Dam_level/Dam_easy/Dam_easy_humvee.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.87659, 400 )
+
+[node name="Main" type="Node2D"]
+rotation = 0.000431299
+scale = Vector2( 1.00515, 0.986364 )
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Ground" parent="." instance=ExtResource( 1 )]
+position = Vector2( 212.969, 0.759338 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1029, 0 )
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 0.267888, 0.508852 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Backwall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backwall"]
+position = Vector2( 110.998, 380.913 )
+shape = SubResource( 1 )
+
+[node name="flyring_blue" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3150.07, 165.366 )
+scale = Vector2( 0.149921, 0.152945 )
+
+[node name="flyring_blue2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5019.89, 151.028 )
+scale = Vector2( 0.149921, 0.152945 )
+
+[node name="flyring_blue3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6898.29, 98.6609 )
+scale = Vector2( 0.149921, 0.152945 )
+
+[node name="finish_line" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 7660.36, 177.29 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Score" type="CanvasLayer" parent="."]
+scale = Vector2( 2, 2 )
+transform = Transform2D( 2, 0, 0, 2, 0, 0 )
+
+[node name="Label" type="Label" parent="Score"]
+offset_left = 8.809
+offset_top = 8.09671
+offset_right = 103.808
+offset_bottom = 22.0967
+text = "enemied kill"
+__meta__ = {
+"_edit_use_anchors_": true,
+"_editor_description_": ""
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer2"]
+offset_left = 5.92269
+offset_top = 568.05
+offset_right = 88.9227
+offset_bottom = 582.05
+text = "version: 4.00"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer3"]
+offset_left = 906.313
+offset_top = 9.77606
+offset_right = 1009.31
+offset_bottom = 23.7761
+text = "Level:Dam_easy"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Bom" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2005.8, 370.47 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bom5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3920.64, 56.8454 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bom2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4656.19, 342.898 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bom3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6509.9, 213.732 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="Bom4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5996.69, 226.015 )
+scale = Vector2( 0.2, 0.2 )
+
+[node name="cha" parent="." instance=ExtResource( 6 )]
+position = Vector2( 398.338, 230.48 )
+scale = Vector2( 0.4, 0.4 )

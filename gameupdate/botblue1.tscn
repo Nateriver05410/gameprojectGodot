@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://01_DAM/gigi/01-normal-ready-shoot/blue/botblue2.png" type="Texture2D" id=1]
+[ext_resource path="res://01_DAM/gigi/01-normal-ready-shoot/blue/botblue1.png" type="Texture2D" id=2]
+[ext_resource path="res://botblue1.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 48.5158
+height = 19.1446
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 54.0656
+height = 47.1859
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2( 1.55785, -1.05672 )
+scale = Vector2( 0.230055, 0.209589 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 3.46048, 13.3762 )
+shape = SubResource( 2 )
+
+[node name="I_ray" type="RayCast2D" parent="."]
+position = Vector2( -24.5639, 24.2617 )
+enabled = true
+target_position = Vector2( -100, 0 )
+collision_mask = 2
+
+[node name="hitbox_l" type="Area2D" parent="." groups=[
+"hitbox",
+]]
+position = Vector2( -24.5639, 24.2617 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_l"]
+position = Vector2( 20.9764, -8.24067 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="hitbox_l" to="." method="_on_hitbox_l_body_entered"]
